@@ -1,0 +1,169 @@
+<?php
+
+namespace App\Services\Users;
+
+use App\Services\BaseServices;
+use Exception;
+
+class Users extends BaseServices {
+
+	public $model;
+
+	public function __construct() {
+		parent::__construct();
+		$this->model = model("UsersModel");
+	}
+
+	public function findOne($filter="") {
+		if (is_array($filter)) {
+			foreach ($filter as $value) {
+				$params = $value;
+				unset($params[ 0 ]);
+				$this->model->{$value[ 0 ]}(...$params);
+			}
+		} else if (is_numeric($filter)) {
+			$this->model->where('users.id', $filter);
+		}
+		return $this->model->first();
+	}
+
+	public function findAll($filter="") {
+		$limit = [];
+		if (is_array($filter)) {
+			foreach ($filter as $value) {
+				$params = $value;
+				unset($params[ 0 ]);
+				if($value[ 0 ] == 'limit') {
+					$limit = $params;
+					continue;
+				}
+				$this->model->{$value[ 0 ]}(...$params);
+			}
+		}
+		return $this->model->findAll(...$limit);
+	}
+
+	public function paginate($length, array $filter=[]) {
+		foreach ($filter as $value) {
+			$params = $value;
+			unset($params[ 0 ]);
+			$this->model->{$value[ 0 ]}(...$params);
+		}
+		$obj = new \stdClass();
+		$obj->results = $this->model->paginate($length);
+		$obj->pager = $this->model->pager;
+		return $obj;
+	}
+
+	public function create($data) {
+		$data = (object) $data;
+
+		if(vars($data, "created_by")==="") {
+			$data->created_by = userId();
+		}
+
+		$this->model->insert($data);
+		return $this->db->insertID();
+	}
+
+	public function update($filter, $data) {
+		$data = (object) $data;
+
+		if(vars($data, "updated_by")==="") {
+			$data->updated_by = userId();
+		}
+
+		if(is_array($filter)){
+			foreach ($filter as $value) {
+				$params = $value;
+				unset($params[ 0 ]);
+				$this->model->{$value[ 0 ]}(...$params);
+			}
+			$this->model->set($data)->update();
+		} else if(is_numeric($filter)) {
+			$this->model->update($filter, $data);
+		} else {
+			throw new Exception(lang("App.notfound", ["Update Primary Id"]));
+		}
+	}
+
+	public function save($data){
+	    return $this->model->save($data);
+	}
+
+	public function delete($filter) {
+		if(is_array($filter)){
+			$this->db->transStart();
+			$this->update($filter, ["deleted_by" => userId()]);
+			foreach ($filter as $value) {
+				$params = $value;
+				unset($params[ 0 ]);
+				$this->model->{$value[ 0 ]}(...$params);
+			}
+			$this->model->delete();
+			$this->db->transComplete();
+		} else if (is_numeric($filter)) {
+			$this->db->transStart();
+			$this->model->where("id", $filter)->set(["deleted_by" => userId()])->update();
+			$this->model->where("id", $filter)->delete();
+			$this->db->transComplete();
+		} else {
+			throw new Exception(lang("App.notfound", ["Update Primary Id"]));
+		}
+	}
+
+	# customize functions is here :)
+
+	public function profile($id, $filters=[]){
+		$builder = [];
+		$builder[] = ['select', 'users.*'];
+		$builder[] = ['select', 'packages.name as package_name', 'packages.code as package_code'];
+		$builder[] = ['join', 'packages', 'packages.id=users.package_id'];
+		$builder[] = ['where', 'users.id', $id];
+		$builder = array_merge($builder, $filters);
+		$profile = $this->findOne($builder);
+		return $profile;
+	}
+
+	public function profiles($filters){
+		$builder = [];
+		$builder[] = ['select', 'users.*'];
+		$builder = array_merge($builder, $filters);
+		return $this->findAll($builder);
+	}
+
+	public function getFaker(){
+		$user = new \stdClass();
+		if(true) {
+			$name = faker("name");
+			$user->name = $name;
+			$user->username = alphanumeric(faker("username"));
+			$user->phone = numeric(faker("phoneId"));
+			$user->email = faker("email");
+			$user->password = "password";
+		} else {
+			$user->name = "";
+			$user->username = "";
+			$user->phone = "";
+			$user->email = "";
+			$user->password = "";
+		}
+		return $user;
+	}
+
+	public function session($user_id){
+		$user = $this->profile($user_id);
+		$obj = new \stdClass();
+		$obj->user = unset_var($user, "password", "created_by", "updated_by", "deleted_by", "deleted_at");
+		$obj->user->photo = base_url($obj->user->photo);
+	    $obj->configs = service("Configs")->getConfigs([
+	    	["where", "is_public", "Yes"]
+	    ]);
+		$obj->packages = service("Packages")->findAll([
+			["select", ["id", "code", "name"]],
+			["orderBy", "id", "asc"]
+		]);
+	    return $obj;
+	}
+
+}

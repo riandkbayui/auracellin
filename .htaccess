@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# =========================================================
+# JANGAN PROSES FILE/FOLDER YANG ADA
+# =========================================================
+
+RewriteCond %{REQUEST_URI} !^/assets/ [NC]
+RewriteCond %{REQUEST_URI} !^/api/ [NC]
+RewriteCond %{REQUEST_URI} !^/uploads/ [NC]
+RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]
+
+RewriteCond %{REQUEST_URI} ^/_loading/sse [NC]
+RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]

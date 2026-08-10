@@ -1,0 +1,49 @@
+# ============================================================
+# AURA CELLIN - Root .gitignore
+# ============================================================
+
+# --- Environment & secrets ---
+# .env
+# .env.*
+# !.env.example
+
+# --- CodeIgniter 4 backend (api) ---
+# api/src/.env
+# api/src/vendor/
+# composer.phar
+
+# CI4 runtime data (writable) - keep guard files
+api/src/writable/cache/*
+!api/src/writable/cache/index.html
+api/src/writable/debugbar/*
+api/src/writable/generator/*
+api/src/writable/logs/*
+!api/src/writable/logs/index.html
+api/src/writable/session/*
+!api/src/writable/session/index.html
+api/src/writable/uploads/*
+!api/src/writable/uploads/index.html
+!api/src/writable/.htaccess
+
+# --- Nuxt frontend (frontend/.gitignore juga berlaku) ---
+frontend/node_modules/
+frontend/.nuxt/
+frontend/dist/
+frontend/.env
+
+# --- User uploads (runtime data) ---
+uploads/*
+!uploads/index.html
+!uploads/.htaccess
+
+# --- Logs ---
+*.log
+npm-debug.log*
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

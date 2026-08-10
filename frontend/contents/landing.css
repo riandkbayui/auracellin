@@ -1,0 +1,309 @@
+:root {
+    --bs-light: #eff2f7;
+    --bs-dark: #343a40;
+    --bs-body-color-rgb: 73, 80, 87;
+    --bs-body-bg-rgb: 248, 248, 251;
+    --bs-body-color: #495057;
+    --bs-body-bg: #f8f9fa;
+    --bs-gradient-hero: linear-gradient(135deg, #FFD700 0%, #FF6B6B 100%);
+    --bs-text-light: #666;
+    --bs-text-dark: #333;
+}
+
+#body {
+	font-family: "Poppins", sans-serif;
+	line-height: 1.6;
+	color: var(--bs-text-dark);
+	overflow-x: hidden;
+    background: var(--bs-white) !important;
+}
+
+/* Hero Section */
+.hero-section {
+	background: var(--bs-gradient-hero);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx=".5" cy=".5" r=".5"><stop offset="0%" stop-color="%23fff" stop-opacity=".1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="300" cy="700" r="120" fill="url(%23a)"/><circle cx="700" cy="800" r="80" fill="url(%23a)"/></svg>') no-repeat center center;
+	background-size: cover;
+	opacity: 0.3;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 2;
+}
+
+.hero-title {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 2rem;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+	font-size: 1.3rem;
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 2rem;
+	font-weight: 400;
+}
+
+/* Section Styling */
+.section {
+	padding: 80px 0;
+}
+
+.section:nth-child(even) {
+	background: linear-gradient(135deg, #fff59d 0%, #ffcdd2 100%);
+}
+
+.section-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 3rem;
+	text-align: center;
+	color: var(--bs-primary-darken);
+}
+
+.section-subtitle {
+	font-size: 1.2rem;
+	color: var(--bs-text-light);
+	text-align: center;
+	margin-bottom: 4rem;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Cards */
+.feature-card {
+	background: white;
+	border-radius: 20px;
+	padding: 2rem;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+	height: 100%;
+}
+
+.feature-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	border-color: var(--bs-primary);
+}
+
+.feature-icon {
+	width: 80px;
+	height: 80px;
+    aspect-ratio: 1/1;
+	background: var(--bs-gradient-primary);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1.5rem;
+	font-size: 2rem;
+	color: white;
+}
+
+/* Benefits List */
+.benefit-item {
+	background: white;
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	border-left: 5px solid var(--bs-primary);
+	transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+	transform: translateX(10px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+	width: 50px;
+	height: 50px;
+    aspect-ratio: 1/1;
+	background: var(--bs-gradient-secondary);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn-primary-custom {
+	background: var(--bs-gradient-primary);
+	border: none;
+	border-radius: 50px;
+	padding: 15px 40px;
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.btn-primary-custom:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+	color: white;
+}
+
+.btn-secondary-custom {
+	background: var(--bs-gradient-secondary);
+	border: none;
+	border-radius: 50px;
+	padding: 15px 40px;
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: white;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-secondary-custom:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 25px rgba(255, 107, 107, 0.6);
+	color: white;
+}
+
+/* Statistics */
+.stat-item {
+	text-align: center;
+	padding: 2rem;
+	background: white;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+	font-size: 3rem;
+	font-weight: 800;
+	color: var(--bs-primary-darken);
+	display: block;
+}
+
+.stat-label {
+	font-size: 1.1rem;
+	color: var(--bs-text-light);
+	margin-top: 0.5rem;
+}
+
+/* Process Steps */
+.process-step {
+	position: relative;
+	background: white;
+	border-radius: 20px;
+	padding: 2rem;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.step-number {
+	width: 60px;
+	height: 60px;
+    aspect-ratio: 1/1;
+	background: var(--bs-gradient-primary);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1.5rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: white;
+}
+
+/* CTA Section */
+.cta-section {
+	background: var(--bs-gradient-hero);
+	color: white;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.cta-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon points="0,1000 1000,0 1000,1000" fill="%23fff" fill-opacity="0.1"/></svg>') no-repeat center center;
+	background-size: cover;
+}
+
+.cta-content {
+	position: relative;
+	z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.hero-title {
+		font-size: 2.5rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1.1rem;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+}
+
+/* Floating Animation */
+@keyframes floating {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.floating {
+	animation: floating 3s ease-in-out infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.pulse {
+	animation: pulse 2s ease-in-out infinite;
+}

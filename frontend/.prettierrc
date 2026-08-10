@@ -1,0 +1,9 @@
+{
+  "printWidth": 2400,
+  "htmlWhitespaceSensitivity": "ignore",
+  "useTabs": true,
+  "tabWidth": 4,
+  "wrap_attributes": "auto",
+  "preserve_newlines": true,
+  "max_preserve_newlines": 1
+}
