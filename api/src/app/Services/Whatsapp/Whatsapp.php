@@ -13,7 +13,7 @@ class Whatsapp extends BaseServices {
 	private $config;
 	private $batchList = [];
 	public $model;
-	protected $base_url = "http://localhost:5000/api/default";
+	protected $base_url = "http://localhost:5000/api/auracellin";
 
 	public function __construct() {
 		parent::__construct();

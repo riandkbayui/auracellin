@@ -50,6 +50,7 @@ import Error from "@/components/main/error";
 </template>
 
 <script>
+import nuxtConfig from "/nuxt.config.js";
 export default {
 	layout: "member/default",
 	data() {
@@ -60,7 +61,7 @@ export default {
 				logout: false
 			},
 			// botwa_url: `http://localhost:5000/m/default`,
-			botwa_url: `https://starcommunity.id/wa`,
+			botwa_url: `https://auracellin.staginglab.my.id/wa/auracellin`,
 		}
 	},
 	mounted() {
