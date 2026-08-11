@@ -10,8 +10,8 @@ import Breadcrumb from "@/components/main/breadcrumb";
 			<div class="card-body">
 				<div class="d-flex flex-column justify-content-center align-items-center text-center">
 					<div class="display-1 text-secondary mb-3">🚧</div>
-					<h2 class="h5 fw-semibold text-primary mb-2">Coming Soon!</h2>
-					<p class="text-primary">Fitur ini sedang kami kembangkan. Mohon ditunggu ya!</p>
+					<h2 class="h5 fw-semibold text-white mb-2">Coming Soon!</h2>
+					<p class="text-white">Fitur ini sedang kami kembangkan. Mohon ditunggu ya!</p>
 				</div>
 			</div>
 		</div>

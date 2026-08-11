@@ -58,6 +58,7 @@ export default {
 			{ href: "/assets/css/app.min.css", type: "text/css", rel: "stylesheet" },
 			{ href: "/assets/css/fontsizes.css", type: "text/css", rel: "stylesheet" },
 			{ href: "/assets/css/custom.css", type: "text/css", rel: "stylesheet" },
+			{ href: "/assets/css/landing.css", type: "text/css", rel: "stylesheet" },
 		],
 		script: [
 			{ src: "/assets/libs/jquery/jquery.min.js", body: true, type: "text/javascript" },

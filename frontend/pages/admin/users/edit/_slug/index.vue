@@ -85,7 +85,7 @@ import Packages from "@/components/forms/packages";
 								<label>Kata sandi</label>
 								<div class="input-group">
 									<input name="password" placeholder="Masukkan kata sandi" value="" class="form-control" type="password" autocomplete="off" />
-									<button type="button" class="btn btn-pw btn-outline-primary"><i class="fa fa-eye"></i></button>
+									<button type="button" class="btn btn-pw btn-primary"><i class="fa fa-eye"></i></button>
 								</div>
 								<span validation-for="password"></span>
 							</div>
@@ -93,7 +93,7 @@ import Packages from "@/components/forms/packages";
 								<label>Konfirmasi sandi</label>
 								<div class="input-group">
 									<input name="password_confrimation" placeholder="Masukkan konfirmasi sandi" value="" class="form-control" type="password" autocomplete="off" />
-									<button type="button" class="btn btn-pw btn-outline-primary"><i class="fa fa-eye"></i></button>
+									<button type="button" class="btn btn-pw btn-primary"><i class="fa fa-eye"></i></button>
 								</div>
 								<span validation-for="password_confrimation"></span>
 							</div>

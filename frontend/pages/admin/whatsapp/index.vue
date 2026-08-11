@@ -9,7 +9,7 @@ import Error from "@/components/main/error";
 
 		<div class="card">
 			<div class="card-header">
-				<h5 class="card-title text-primary">Scan QR Code!</h5>
+				<h5 class="card-title text-white">Scan QR Code!</h5>
 			</div>
 			<div class="card-body bg-light">
 				<div>
@@ -28,7 +28,7 @@ import Error from "@/components/main/error";
 			</div>
 			<div class="card-footer">
 				<div v-show="buttons.restart || buttons.logout" class="d-flex gap-2 justify-content-center">
-					<button v-show="buttons.restart" v-on:click="clickRestart" class="btn btn-sm btn-warning"><i class="mdi mdi-refresh"></i> Restart</button>
+					<button v-show="buttons.restart" v-on:click="clickRestart" class="btn btn-sm btn-primary"><i class="mdi mdi-refresh"></i> Restart</button>
 					<button v-show="buttons.logout" v-on:click="clickLogout" class="btn btn-sm btn-danger"><i class="mdi mdi-logout"></i> Logout</button>
 				</div>
 			</div>
@@ -115,7 +115,7 @@ export default {
 				} else {
 					err_msg = err.toString();
 				}
-				
+
 				this.writeLog(err_msg);
 			}
 		},
@@ -132,7 +132,7 @@ export default {
 				} else {
 					err_msg = err.toString();
 				}
-				
+
 				this.writeLog(err_msg);
 			}
 		},
@@ -149,7 +149,7 @@ export default {
 				} else {
 					err_msg = err.toString();
 				}
-				
+
 				this.writeLog(err_msg);
 			}
 		},

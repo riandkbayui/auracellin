@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : aksinusa
+ Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 80042 (8.0.42-0ubuntu0.20.04.1)
+ Source Server Version : 80042 (8.0.42)
  Source Host           : localhost:3306
- Source Schema         : starcom
+ Source Schema         : auracellin
 
  Target Server Type    : MySQL
- Target Server Version : 80042 (8.0.42-0ubuntu0.20.04.1)
+ Target Server Version : 80042 (8.0.42)
  File Encoding         : 65001
 
- Date: 01/03/2026 19:41:32
+ Date: 11/08/2026 22:00:12
 */
 
 SET NAMES utf8mb4;
@@ -30,7 +30,7 @@ CREATE TABLE `_placeholder`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of _placeholder
@@ -52,7 +52,7 @@ CREATE TABLE `area_cities`  (
   `deleted_by` int NULL DEFAULT NULL,
   `deleted_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 515 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 515 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of area_cities
@@ -591,7 +591,7 @@ CREATE TABLE `attempts`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 954 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 959 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of attempts
@@ -1549,6 +1549,11 @@ INSERT INTO `attempts` VALUES (950, 42, 'SIGNIN', 1, '', '162.158.107.81', 'Mozi
 INSERT INTO `attempts` VALUES (951, 1, 'SIGNIN', 1, '', '108.162.226.251', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36', '2026-02-28 22:29:53', NULL, '2026-02-28 22:29:53', NULL, NULL, NULL);
 INSERT INTO `attempts` VALUES (952, 1, 'SIGNIN', 1, '', '172.70.208.112', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36', '2026-02-28 22:30:49', NULL, '2026-02-28 22:30:49', NULL, NULL, NULL);
 INSERT INTO `attempts` VALUES (953, 1, 'SIGNIN', 1, '', '172.70.188.9', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', '2026-02-28 22:48:02', NULL, '2026-02-28 22:48:02', NULL, NULL, NULL);
+INSERT INTO `attempts` VALUES (954, 1, 'SIGNIN', 1, '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36', '2026-08-11 18:40:47', NULL, '2026-08-11 18:40:47', NULL, NULL, NULL);
+INSERT INTO `attempts` VALUES (955, 2, 'SIGNIN', 1, '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36', '2026-08-11 19:54:24', NULL, '2026-08-11 19:54:24', NULL, NULL, NULL);
+INSERT INTO `attempts` VALUES (956, 1, 'SIGNIN', 1, '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36', '2026-08-11 19:55:59', NULL, '2026-08-11 19:55:59', NULL, NULL, NULL);
+INSERT INTO `attempts` VALUES (957, 1, 'SIGNIN', 1, '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36', '2026-08-11 21:45:10', NULL, '2026-08-11 21:45:10', NULL, NULL, NULL);
+INSERT INTO `attempts` VALUES (958, 1, 'SIGNIN', 1, '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36', '2026-08-11 21:55:36', NULL, '2026-08-11 21:55:36', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for configs
@@ -1569,17 +1574,15 @@ CREATE TABLE `configs`  (
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `config_key`(`key` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of configs
 -- ----------------------------
 INSERT INTO `configs` VALUES (1, 'office_address', 'office', 'Alamat perusahaan', 'Perusahaan - Alamat', 'Yes', '2023-03-27 08:35:11', 1, '2025-05-15 18:46:59', NULL, NULL, NULL);
-INSERT INTO `configs` VALUES (2, 'office_email', 'office', 'starcomofficial@gmail.com', 'Perusahaan - Email', 'Yes', '2023-03-27 08:35:11', 1, '2025-08-28 10:46:45', NULL, NULL, NULL);
-INSERT INTO `configs` VALUES (3, 'office_name', 'office', 'Star Community', 'Perusahaan - Nama', 'Yes', '2023-03-27 08:35:11', 1, '2025-07-29 11:14:01', 1, NULL, NULL);
-INSERT INTO `configs` VALUES (4, 'office_phone', 'office', '6285800227944', 'Perusahaan - Telepon', 'Yes', '2023-03-27 08:35:11', 1, '2025-08-29 13:07:22', 1, NULL, NULL);
-INSERT INTO `configs` VALUES (5, 'withdraw_admin', 'withdraw', '5000', 'Penarikan - Biaya Admin', 'Yes', '2025-05-15 09:47:48', 1, '2025-05-15 14:19:30', NULL, NULL, NULL);
-INSERT INTO `configs` VALUES (6, 'withdraw_min', 'withdraw', '50000', 'Penarikan - Minimal', 'Yes', '2025-05-15 09:50:34', 1, '2025-05-15 14:19:30', NULL, NULL, NULL);
+INSERT INTO `configs` VALUES (2, 'office_email', 'office', 'auracellinofficial@gmail.com', 'Perusahaan - Email', 'Yes', '2023-03-27 08:35:11', 1, '2026-08-11 19:56:44', NULL, NULL, NULL);
+INSERT INTO `configs` VALUES (3, 'office_name', 'office', 'Aura Cellin', 'Perusahaan - Nama', 'Yes', '2023-03-27 08:35:11', 1, '2026-08-11 19:56:35', 1, NULL, NULL);
+INSERT INTO `configs` VALUES (4, 'office_phone', 'office', '628912345678', 'Perusahaan - Telepon', 'Yes', '2023-03-27 08:35:11', 1, '2026-08-11 19:56:58', 1, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for events
@@ -1598,11 +1601,12 @@ CREATE TABLE `events`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of events
 -- ----------------------------
+INSERT INTO `events` VALUES (1, 'uploads/events/1786449695_593b4384d79b504afb21.jpeg', 'Aura Cellin', 'Non et ad culpa ad qui cillum labore sint cillum consectetur.', 'active', '2026-08-11 19:01:36', 1, '2026-08-11 19:01:36', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for forms
@@ -1625,12 +1629,13 @@ CREATE TABLE `forms`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of forms
 -- ----------------------------
 INSERT INTO `forms` VALUES (1, 'lukman', 'Lukman', 'Masukan Kata Pembuka', 'Masukan Kata Penutup', 82, '[\"Buatkan \"]', '6281541514688', 'inactive', '2025-09-04 23:28:20', NULL, '2025-09-04 23:30:47', NULL, NULL, NULL);
+INSERT INTO `forms` VALUES (2, 'form-1', 'Form 1', 'Voluptate consequat sunt tempor proident enim sit ut et nisi. Ullamco ut occaecat sint ad cillum. Anim cillum amet eu irure in proident reprehenderit labore.', 'Ad Lorem incididunt cillum nulla aute duis proident aliqua in nisi. Aliquip est ad anim adipisicing ullamco consectetur do nostrud sit et velit elit voluptate in. Fugiat eu ex esse id cillum aliqua consectetur. Nulla ut Lorem id pariatur irure et aliquip est cillum do duis fugiat. In eiusmod aute dolore ex consectetur voluptate sunt excepteur ex elit aliquip eu.', 1, '[\"Nama\",\"Kota\",\"Alamat Lengkap\"]', '6218912364789;6289654123;628912668789', 'active', '2026-08-11 19:14:41', 1, '2026-08-11 19:14:41', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for itb_clients
@@ -1650,12 +1655,13 @@ CREATE TABLE `itb_clients`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of itb_clients
 -- ----------------------------
 INSERT INTO `itb_clients` VALUES (1, 2, 'Agung', 163, '628546454046181', 0, '2025-08-29 23:31:56', NULL, '2025-08-29 23:31:56', NULL, NULL, NULL);
+INSERT INTO `itb_clients` VALUES (2, 3, 'Saya sendiri', 258, '628912364789', 0, '2026-08-11 19:24:44', 1, '2026-08-11 19:24:44', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for itbs
@@ -1674,13 +1680,14 @@ CREATE TABLE `itbs`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of itbs
 -- ----------------------------
 INSERT INTO `itbs` VALUES (1, 'Gilang', '6282127796455', 'Cianjur', 2, '2025-08-29 12:51:51', NULL, '2025-08-29 12:51:51', NULL, NULL, NULL);
 INSERT INTO `itbs` VALUES (2, 'Rudi baschamp', '6281385880977', '', 5, '2025-08-29 23:31:16', NULL, '2025-08-29 23:31:16', NULL, NULL, NULL);
+INSERT INTO `itbs` VALUES (3, 'Saya sendiri', '6289123456789', 'Laboris exercitation magna cupidatat enim esse.', 1, '2026-08-11 19:23:06', 1, '2026-08-11 19:23:06', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for landing_pages
@@ -1698,7 +1705,7 @@ CREATE TABLE `landing_pages`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of landing_pages
@@ -1722,11 +1729,12 @@ CREATE TABLE `merchandises`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of merchandises
 -- ----------------------------
+INSERT INTO `merchandises` VALUES (1, 'uploads/merchandises/1786449913_223cbd48e08ba6c06e3d.jpeg', 'Merchandise 1', 'Labore sit ex sint do proident cillum adipisicing.', 'https://www.youtube.com/watch?v=RrESvSRNpeo', 'active', '2026-08-11 19:05:13', 1, '2026-08-11 19:05:13', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for mission_subs
@@ -1747,12 +1755,13 @@ CREATE TABLE `mission_subs`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of mission_subs
 -- ----------------------------
 INSERT INTO `mission_subs` VALUES (1, '68ab226bad0d89c4b156', 1, 48, 'uploads/missions/1756045931_b29736c7df35afea4989.jpeg', 'Alhamdulilah semangat pool luar biasa ', 'success', '2025-08-24 21:32:11', NULL, '2025-08-24 21:34:14', NULL, NULL, NULL);
+INSERT INTO `mission_subs` VALUES (2, '6a7b1b90db4cbd68f926', 3, 2, 'uploads/missions/1786452880_9bec9a473eccc971157b.jpeg', 'sudah saya ikuti', 'success', '2026-08-11 19:54:40', 2, '2026-08-11 19:58:20', 1, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for missions
@@ -1774,13 +1783,14 @@ CREATE TABLE `missions`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of missions
 -- ----------------------------
 INSERT INTO `missions` VALUES (1, '68aa5bc48865993c01e1', 6, NULL, 'Kini Hadir Satu Satunya Support Sistem StarCom', 'Bantu Like, komen, Share Ya ', 'https://www.facebook.com/share/p/1JygZVShSu/', 'active', '2025-08-24 07:24:36', 6, '2025-08-24 07:39:23', 6, NULL, NULL);
 INSERT INTO `missions` VALUES (2, '68ab232ae6360a4e3f0e', 2, NULL, 'Follow fb', 'Bantu follow fb saya ya starpreneur', 'https://www.facebook.com/share/16cg8D4bDH/', 'active', '2025-08-24 21:35:22', 2, '2025-08-29 14:38:12', 2, NULL, NULL);
+INSERT INTO `missions` VALUES (3, '6a79d8c419cfbaf011e6', 1, NULL, 'aaa', 'dddd', 'aaa', 'active', '2026-08-10 20:57:24', 1, '2026-08-10 20:57:24', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for packages
@@ -1797,13 +1807,13 @@ CREATE TABLE `packages`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of packages
 -- ----------------------------
 INSERT INTO `packages` VALUES (1, 'pkg1', 'Starter', '2025-08-02 15:32:24', 1, NULL, NULL, NULL, NULL);
-INSERT INTO `packages` VALUES (2, 'pkg2', 'Star Active', '2025-08-02 15:32:46', 1, NULL, NULL, NULL, NULL);
+INSERT INTO `packages` VALUES (2, 'pkg2', 'Aura Active', '2025-08-02 15:32:46', 1, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for slideshows
@@ -1820,17 +1830,12 @@ CREATE TABLE `slideshows`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of slideshows
 -- ----------------------------
-INSERT INTO `slideshows` VALUES (1, 'uploads/slideshows/1754358933_096648a84d6cd4bfe0a3.jpeg', 'active', '2025-08-05 08:55:34', 1, '2025-08-29 18:45:14', NULL, '2025-08-29 18:45:14', 1);
-INSERT INTO `slideshows` VALUES (2, 'uploads/slideshows/1754464367_606b8bcad70de4c031c1.jpeg', 'inactive', '2025-08-06 14:12:48', 1, '2025-08-06 20:23:29', 1, '2025-08-06 20:23:29', 1);
-INSERT INTO `slideshows` VALUES (3, 'uploads/slideshows/1754464458_63d549d96b1f7d54c6af.jpeg', 'active', '2025-08-06 14:14:18', 1, '2025-08-06 14:14:18', NULL, NULL, NULL);
-INSERT INTO `slideshows` VALUES (4, 'uploads/slideshows/1754489199_444d6f08da6b3290269c.jpeg', 'active', '2025-08-06 21:06:40', 1, '2025-08-06 21:06:40', NULL, NULL, NULL);
-INSERT INTO `slideshows` VALUES (5, 'uploads/slideshows/1754548523_6be534236c05f0ea426b.jpeg', 'active', '2025-08-07 13:35:23', 1, '2025-08-29 18:45:09', NULL, '2025-08-29 18:45:09', 1);
-INSERT INTO `slideshows` VALUES (6, 'uploads/slideshows/1756468927_713b76051010263a2398.jpeg', 'active', '2025-08-29 19:02:08', NULL, '2025-08-29 19:02:08', NULL, NULL, NULL);
+INSERT INTO `slideshows` VALUES (1, 'uploads/general/placeholder.jpg', 'active', '2025-08-05 08:55:34', 1, '2025-08-29 18:45:14', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for study_room_favs
@@ -1848,7 +1853,7 @@ CREATE TABLE `study_room_favs`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of study_room_favs
@@ -1887,7 +1892,7 @@ CREATE TABLE `study_room_subs`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of study_room_subs
@@ -1924,7 +1929,7 @@ CREATE TABLE `study_rooms`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of study_rooms
@@ -1952,7 +1957,7 @@ CREATE TABLE `tokens`  (
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `tokens_id_uindex`(`id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tokens
@@ -1988,11 +1993,12 @@ CREATE TABLE `tutorials`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tutorials
 -- ----------------------------
+INSERT INTO `tutorials` VALUES (1, '6a7b0f729b3dad0078eb', 'uploads/tutorials/1786449778_2981b04197fd12503630.jpeg', 'Tutorial 1', 'Non et ad culpa ad qui cillum labore sint cillum consectetur.', 'https://www.youtube.com/embed/RrESvSRNpeo', 'active', '2026-08-11 19:02:59', 1, '2026-08-11 19:02:59', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for users
@@ -2020,100 +2026,100 @@ CREATE TABLE `users`  (
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `uniq_username`(`username` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 90 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 90 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, NULL, 2, 'admin', 'uploads/profiles/1754355140_eee5b25dd6e0876713cb.jpeg', 'Star Community', 'starcom', 'starcommunity', '628131380797', 'admin@mail.com', 'jalan raya', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2023-03-27 13:38:28', 0, '2025-08-21 08:44:16', 1, NULL, NULL);
-INSERT INTO `users` VALUES (2, 1, 2, 'member', 'uploads/profiles/1754245598_5a6a0b147577373746ac.jpeg', 'Gilang ramadhan', NULL, 'gira2719', '082127796455', 'gilangrmd2719@gmail.com', 'Cianjur', 'active', '$2y$10$ekNgDSUkkmaA/EIvb8CACe5B6PgKIp87Otn8AOh/P.NiBH/RArGIC', '2025-08-01 14:08:30', 1, '2025-08-06 20:22:53', 2, NULL, NULL);
-INSERT INTO `users` VALUES (3, 2, 2, 'member', 'uploads/profiles/user.png', 'Dede Yusup Jaelani', 'deyus12', 'deyus12', '085189720898', 'dedeyus1208@gmail.com', 'ciranjang', 'active', '$2y$10$H8NOQqe/ROlRLq1S9bsGTeFG8CLVuKuC1XXx72ZVrTGJ.lfzU2Fli', '2025-08-14 15:33:19', 2, '2025-08-20 21:20:19', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (4, 2, 1, 'member', 'uploads/profiles/user.png', 'Gilang Ramadhan', 'gilang', 'gilang', '082127796455', 'gilangrdm2719@gmail.com', 'Cianjur', 'active', '$2y$10$LLN6SJ0GgMRMEi.MVJobS.snLUMnmTq7jYdZFL16StDkKyojWqw3C', '2025-08-14 15:37:46', 2, '2025-08-14 15:37:46', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (5, 2, 1, 'member', 'uploads/profiles/user.png', 'Rudi', 'rudi27', 'rudi27', '08521616784648', 'rudi@gmail.com', 'Garut', 'active', '$2y$10$AkAqzriwHNidpgjETF0Nc.NfzUmWd6LXMZ1Q1c6dMBiBwyxwJ9NoW', '2025-08-17 20:35:18', NULL, '2025-08-17 20:35:18', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (6, 1, 2, 'member', 'uploads/profiles/1755698213_8d2ea1864f51dd982b99.jpeg', 'Imam Safii Rambe ', 'bgnimam', 'bgnimam', '081315388799', 'safiirambei1@gmail.com', 'Medan', 'active', '$2y$10$ynxQSi1RlZ8QLJAK1SHBpOHzKhYIor6b/1OK08UxSuNIQra6woIJ6', '2025-08-20 20:47:20', NULL, '2025-08-20 20:56:53', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (7, 6, 2, 'member', 'uploads/profiles/1755709394_5fb3ded11774c04c16c8.jpeg', 'Nardi', 'nardi', 'nardi', '082289752557', 'nardii1985@gmail.com', 'Padang', 'active', '$2y$10$jBnEQbls6QeL6zzpWlhSPOuLRdpd3ziwbAZctyGh1WgCMP8jMBXI.', '2025-08-20 21:39:51', NULL, '2025-08-21 14:29:30', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (8, 6, 2, 'member', 'uploads/profiles/1758466834_3adcc1cab61bce2c0017.jpeg', 'Mhd. Rosyadi Hs', 'sultankerinci2025', 'sultankerinci2025', '085777991979', 'khoirulumrihasibuan7@gmail.com', 'Pekanbaru ', 'active', '$2y$10$T/5gKaBxpxf7rrsfCwagcO52wZ8MdMjPex9ANN.oYH8vhOBSaDA0a', '2025-08-20 22:23:56', NULL, '2025-09-21 22:00:34', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (9, 6, 1, 'member', 'uploads/profiles/user.png', 'Dwi Niko Ardi', 'nikobgn', 'nikobgn', '085261712413', 'dwinikokgprtp@gmail.com', 'Medan ', 'active', '$2y$10$6cXxyELDSf82XQ.mKnxyGuz1ARRBzh40DORC2KeWQGTx/GtawxBuq', '2025-08-20 22:28:32', NULL, '2025-08-20 23:03:04', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (10, 6, 2, 'member', 'uploads/profiles/1755765932_a19260df48bdd0329f71.jpeg', 'Ahmad Rudi Rambe  ', 'rudibgn', 'rudibgn', '082241312105', 'rudirambe140888@gmail.com', 'Medan', 'active', '$2y$10$zWI6oyOrC9uc8oPEonbOBOSmO3KrV96j8ZhTWN2LgVZ112qI9M/Wy', '2025-08-20 22:32:11', NULL, '2025-08-21 15:45:32', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (11, 1, 2, 'member', 'uploads/profiles/1755750745_0ae475cf92f59f804ee0.jpeg', 'Ari Wijaya', 'ariwijaya', 'ariwijaya', '082121203926', 'ariwwijaya@gmail.com', 'jl rawa kalong RT04 rw10 kelurahan limo kecamatan Grogol kota depok', 'active', '$2y$10$U5u0ceuQnmyOGnUx1BfDEuXuaQ8KIkLA28MUb8cE0KsDsoZY0GEzi', '2025-08-20 22:39:56', NULL, '2025-08-21 11:32:25', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (12, 6, 2, 'member', 'uploads/profiles/user.png', 'Toga syaprudin', 'togabgn', 'togabgn', '085882311521', 'togasyaprudin@gmail.com', 'Jakarta ', 'active', '$2y$10$6.5mk0wgb11rcPEaJfaG6eOQ56qAklf4tcf6YAhxs4TcUSCPsMvai', '2025-08-20 22:40:29', NULL, '2025-08-20 22:41:52', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (13, 6, 2, 'member', 'uploads/profiles/user.png', 'Riswan', 'riswanbgn', 'riswanbgn', '085894925413', 'hakimriswan989@gmail.com', 'Jakarta Barat ', 'active', '$2y$10$AyXn0JNFaIdcEOEXhXGMJePcUgHJaloKgmB17oTWs.NBMFgamhjtm', '2025-08-20 22:44:10', NULL, '2025-08-20 22:45:50', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (14, 6, 2, 'member', 'uploads/profiles/1755708031_79f2b8a6acdbe56d1868.jpeg', 'Maryoto', 'maryotobgn', 'maryotobgn', '085216908045', 'maryotoyoto56@gmail.com', 'Jakarta ', 'active', '$2y$10$nEcUdbRXSxl33MOfBN/Y7Oh6l.mgKv3BeAER9ZEOVXHq6hcAeTu4K', '2025-08-20 22:48:27', NULL, '2025-08-20 23:40:31', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (15, 1, 2, 'member', 'uploads/profiles/1755739351_50f6524b6adf4cf97b4f.jpeg', 'Indra Depriyoga Rachman', 'indradep', 'indradep', '089515297801', 'depriyogaindra@gmail.com', 'jl karasak utara 1', 'active', '$2y$10$SrVP2npIWXr16Exzj2QvGeBS3ExFNdO4xstLNo4m4w/zij1O0rwsq', '2025-08-20 23:09:59', NULL, '2025-08-21 08:24:52', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (16, 6, 2, 'member', 'uploads/profiles/user.png', 'Tajul Maimun ', 'tajulbgn', 'tajulbgn', '088223936058', 'maimuntajul3@gmail.com', 'Padang ', 'active', '$2y$10$0spx1aYcfckH7ABdIMpDKOXVhDmYrF2XfRwcvrb7qMvuwPcs7X1Mi', '2025-08-20 23:10:58', NULL, '2025-08-21 09:03:21', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (17, 6, 2, 'member', 'uploads/profiles/1755755795_2af0c6b84e6373a31a42.jpeg', 'Hamini', 'haminibgn', 'haminibgn', '085711335011', 'haminigold2017@gmail.com', 'Jakarta ', 'active', '$2y$10$R2aXIe4uHN234Xg/pCntHuC.3FvzTJkzJCmkvRvKF9fylMzWG4z6G', '2025-08-20 23:14:21', NULL, '2025-08-21 12:56:35', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (18, 8, 2, 'member', 'uploads/profiles/1756054670_8cb38d424a1e7dcfb85e.jpeg', 'Hermawan', 'hermanbgn', 'hermanbgn', '082172357514', 'megakembara7356@gmail.com', 'Bengkulu ', 'active', '$2y$10$xaxZoszS.zqAky21i8j1DuYkqdBBG2/7VNh8jN4AncBMgvN/BfNLO', '2025-08-21 00:11:15', NULL, '2025-08-24 23:57:50', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (19, 8, 2, 'member', 'uploads/profiles/user.png', 'Samsul Hadi', 'hadibgn', 'hadibgn', '087859463356', 'samsulhadi4580@gmail.com', 'Kediri Jawa Timur ', 'active', '$2y$10$xDfQun40RS7tiD.iiWe.fedoeMI3fShOXasNtxnNhhX3fgTPBdIgi', '2025-08-21 05:38:51', NULL, '2025-08-21 07:57:44', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (20, 6, 2, 'member', 'uploads/profiles/user.png', 'Hasan Arifin', 'hasanbgn', 'hasanbgn', '085779517848', 'hasan.arifin30@gmail.com', 'Bekasi ', 'active', '$2y$10$vr4EH1PTHEfL025SW3xqb.f4z.7/VHnQios3mRJTUUV3Ax27NpxDa', '2025-08-21 05:40:40', NULL, '2025-08-22 08:01:46', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (21, 6, 2, 'member', 'uploads/profiles/1755743707_d38694df0429f12a2555.jpeg', 'Ibnu Abdulah ', 'ibnubgn', 'ibnubgn', '085218507295', 'ibnuabdullah1991@gmail.com', 'Sulawesi ', 'active', '$2y$10$8aCFqAIazmaaV4s2ZVms3unKq.NpkGaSYBUwlV9ZS3Gus8rEuj9sy', '2025-08-21 05:44:31', NULL, '2025-08-21 09:35:07', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (22, 8, 2, 'member', 'uploads/profiles/user.png', 'Siti Khoiriah Hasibuan ', 'khoiriahbgn', 'khoiriahbgn', '08557011979', 'hasibuansitikhoiriah67@gmail.com', 'Medan', 'active', '$2y$10$133lSGtVrgRcn12LdfkqueOrzg22OZcpaQGmfiyWj6AiVL/GBJH4W', '2025-08-21 05:47:42', NULL, '2025-08-21 07:59:39', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (23, 8, 2, 'member', 'uploads/profiles/1755846439_1c22d59e9f9f81389b35.jpeg', 'Wildan Ansori Hasibuan ', 'ansorbgn', 'ansorbgn', '081511121279', 'wildanansorihasibuan855@gmail.com', 'Medan', 'active', '$2y$10$hsWpEfKVF0HqvSXA8fGNDuaXbfOdUPHkSYCsutGI36G6MQjFVKocy', '2025-08-21 05:52:36', NULL, '2025-08-22 14:07:19', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (24, 8, 2, 'member', 'uploads/profiles/user.png', 'Munjali', 'munjalibgn', 'munjalibgn', '087855873009', 'munjali.abdurrahman@gmail.com', 'Surabaya ', 'active', '$2y$10$4d/XSoQB3oKY0dreIbbnXO2MVXC8783YFk6CjaNQKfX/iroDq7dX.', '2025-08-21 05:57:04', NULL, '2025-08-21 08:02:30', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (25, 8, 2, 'member', 'uploads/profiles/user.png', 'Hasrul', 'hasrulbgn', 'hasrulbgn', '08219343881', 'hasrulpolman159@gmail.com', 'Polewali Mandar ', 'active', '$2y$10$5E9pXMwH.7uX6oUz2BBKR.pqnFhkF3wNbJXMTITLikKwRIo5bGyfO', '2025-08-21 06:00:48', NULL, '2025-08-21 08:03:19', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (26, 8, 2, 'member', 'uploads/profiles/user.png', 'Eka Guspita ', 'ekabgn', 'ekabgn', '081276354947', 'ekaguspita5@gmail.com', 'Pelalawan Riau ', 'active', '$2y$10$7erWNmvlRrQ17pPxYjOXg.F4cem1um5ioML1RsJjF4WC5B4JcSnba', '2025-08-21 06:03:59', NULL, '2025-08-21 08:04:51', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (27, 8, 2, 'member', 'uploads/profiles/user.png', 'Hartina ', 'tinabgn', 'tinabgn', '085337044143', 'tyna48736@gmail.com', 'Morowali ', 'active', '$2y$10$wnz8tcn/k8Q1Pu7DmJwGEeQN0ekFK7ttPEDhXlat.vq2GIu2Ry4Bi', '2025-08-21 06:08:18', NULL, '2025-08-21 08:05:39', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (28, 8, 2, 'member', 'uploads/profiles/1755902923_75650f699880c62bcb11.jpeg', 'Haris SP', 'harisbgn', 'harisbgn', '085398244185', 'harisbgn', 'Morowali ', 'active', '$2y$10$fnJDnb0AldLgTxXhGENpUul2siwcdeZd58PT4VExQJ4TajuZpMp6C', '2025-08-21 06:11:23', NULL, '2025-08-23 05:51:01', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (29, 8, 2, 'member', 'uploads/profiles/user.png', 'Rupika', 'vikabgn', 'vikabgn', '085148479730', 'rupikayolanda49@gmail.com', 'Ketapang Kalimantan Barat ', 'active', '$2y$10$idrs0MdgVHaRNfT0WytJVOe7csFnxRxaPEwncrIhAFDhrBmZ.YOv6', '2025-08-21 06:14:30', NULL, '2025-08-21 08:07:51', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (30, 8, 2, 'member', 'uploads/profiles/user.png', 'Rika Dewita', 'rikabgn', 'rikabgn', '082190448494', 'dd6142810@gmail.com', 'Bengkulu ', 'active', '$2y$10$rarrLY6Z9ZOgEljq8CgT6eplvZS1TrYpN.9b6DKzwQmrFP.7FLlwa', '2025-08-21 06:18:35', NULL, '2025-08-21 08:57:41', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (31, 6, 2, 'member', 'uploads/profiles/user.png', 'Sartati br Marbun ', 'darwinbgn', 'darwinbgn', '082170462938', 'darwinpurba81gmail.com', 'Batam ', 'active', '$2y$10$eA5itwCuXmdc3EAxRAzicu8A9Ui8vsD.kwCIu7JYYsW60RRbAJQuK', '2025-08-21 07:05:55', NULL, '2025-08-21 08:09:17', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (32, 1, 2, 'member', 'uploads/profiles/1755742192_b8872c52df9e3dc2da14.jpeg', 'Kang Ajie Alfateh', 'mst001', 'mst001', '081312573373', 'antusias9119@gmail.com', 'KOMPLEK LISVIE VILLAGE, \r\nJl. Cijeruk. D2- 25 , Bojongsari, Kec. Bojongsoang, Kabupaten Bandung, Jawa Barat 40288', 'active', '$2y$10$SrrIaqC7XxELywfqO6ACouF8C/SP0Q213a7oMA3AKsAP8EHdWuCgK', '2025-08-21 09:07:36', NULL, '2025-08-21 09:09:52', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (33, 10, 2, 'member', 'uploads/profiles/user.png', 'ANI PUJIATI ', 'pujiati', 'pujiati', '082221252471', 'anipuji004@gmail.com', 'Banyumas', 'active', '$2y$10$OPkQPPRv.p2eHKDCPJZHqO/OCFxi.qJORmukY6o.ZLB6xhZosO5d6', '2025-08-21 09:34:06', NULL, '2025-08-21 10:27:20', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (34, 10, 2, 'member', 'uploads/profiles/user.png', 'IBNU ABDULLAH ', 'ibnu', 'ibnu', '085218507295', 'ibnuabdullah1991@gmail.com', 'Kalimantan Barat ', 'active', '$2y$10$sBo/48G6pwyXx.m70.kVtetsnTCf26zpi7hmdMXujZ9SiCSaGqXgC', '2025-08-21 09:43:41', NULL, '2025-08-21 10:28:12', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (35, 1, 2, 'member', 'uploads/profiles/1755766000_162c823d67e006083a16.jpeg', 'Wawan', 'bd0006975', 'bd0006975', '083114021611', 'abunyaalfath@gmail.com', 'bandung', 'active', '$2y$10$3REiBVwgnFqbxlyN7uRMCuHo0UGSOKA7nvUtE9M/OKO3JxpjiFQTu', '2025-08-21 15:33:03', NULL, '2025-08-21 15:46:40', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (36, 10, 2, 'member', 'uploads/profiles/user.png', 'HASYIM SIREGAR ', 'hasyim', 'hasyim', '085277149777', 'hasyimsiregarh@gmail.com', 'Rantau Prapat ', 'active', '$2y$10$feaSei0Ov/O3MrPCCBQcJ.RTvNzfyVu2TDILtBu5pkrO1LTgVndJy', '2025-08-21 15:34:43', NULL, '2025-08-21 15:41:30', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (37, 1, 2, 'member', 'uploads/profiles/user.png', 'Asep Gartina', 'asepgartina', 'asepgartina', '081901117167', 'asepgartina11@gmail.com', 'Situgunting timur RT 04/08 Bandung Jawa Barat', 'active', '$2y$10$AklUBjBWnG1ytOW0.jHGJeVa/fQpvhGrOR0RLrCNDe0xOTiQX6see', '2025-08-21 15:43:55', NULL, '2025-08-21 15:45:02', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (38, 6, 2, 'member', 'uploads/profiles/1756223238_fa55b01fe9be16c9e1b2.jpeg', 'muhamad taufiq firmansyah', 'taufiqbgn', 'taufiqbgn', '081372678007', 'taufiq82.firmansyah@gmail.com', 'Batam', 'active', '$2y$10$YNx45lwG4.B.mwJFW8pl8OvgcpO8.T/.egO5uLJTvidmuf.7UuyPG', '2025-08-21 16:34:14', NULL, '2025-08-26 22:47:18', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (39, 37, 1, 'member', 'uploads/profiles/user.png', 'Asep gartina', 'starasep', 'starasep', '081901117167', 'asepgartina11@gmail.com', 'Situgunting timur RT 04/08 Bandung ', 'active', '$2y$10$0v9wQusunu2AFTpHAM6Riuluu8Fqv2.sY1zo9IfsoavAqUUVI5cP6', '2025-08-21 16:45:08', NULL, '2025-08-21 17:21:36', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (40, 6, 2, 'member', 'uploads/profiles/user.png', 'SELPIUS', 'selpiusbgn', 'selpiusbgn', '081382085236', 'www.piusselpius@gmail.com', 'Sulawesi ', 'active', '$2y$10$rPvXLaw30pf19J7kFsIwdeukQGIBiecIFUQL3XRcMbJ8dqG6aCTs6', '2025-08-21 16:47:21', NULL, '2025-08-21 17:05:42', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (41, 37, 1, 'member', 'uploads/profiles/user.png', 'Asep gartina', 'bgn', 'bgn', '081901117167', 'asepgartina11@gmail.com', 'Situgunting timur GG ma arum RT 04 RW 08', 'active', '$2y$10$aa/058eYhQbhHuRXEuF9OeIbm5U5YM4OoRkl52aoehi8Hyr9IhcJi', '2025-08-21 17:17:30', NULL, '2025-08-21 17:17:30', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (42, 1, 2, 'member', 'uploads/profiles/1755772094_23d42aa88e0047f4c2ed.jpeg', 'Fikri Awaluddin', 'fikriaz', 'fikriaz', '089675600745', 'fikriawaluddin0884@gmail.com', 'Bantargebang Kota Bekasi', 'active', '$2y$10$tbt6/9NkiLdGH1/mKj2WA..BEPPPAwTbWLFNxhVd8/MzdEuWErWg2', '2025-08-21 17:25:34', NULL, '2025-08-21 17:29:25', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (43, 6, 2, 'member', 'uploads/profiles/user.png', 'Rudi Riswanto ', 'rudiantobgn', 'rudiantobgn', '081375880977', 'rudibest683@gmail.com', 'Bandung ', 'active', '$2y$10$ici3Z0D9FdlLJ6JmP3XJb.F.FjMy3mUvEkNreWfqDFBpMAOx3g0T2', '2025-08-21 17:38:58', NULL, '2025-08-21 18:30:36', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (44, 1, 2, 'member', 'uploads/profiles/1755776049_16c3f25f417d78ef25dd.jpeg', 'Atikah', 'bd0013610', 'atikah', '081385880977', 'rudibest683@gmail.com', 'Garut', 'active', '$2y$10$lRcV.yZp8IKI3v6o.nmPWOhDzWP3q8N5QrVnh1X.JdP6x31m/IHuq', '2025-08-21 18:28:22', NULL, '2025-08-21 18:34:09', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (45, 1, 2, 'member', 'uploads/profiles/1755776872_48ae4ff51122b30201a8.jpeg', 'Soni Mustopa Saputra ', 'sonidestinator', 'sonidestinator', '085864783787', 'soni.mustopa@gmail.com', 'Bandung', 'active', '$2y$10$xiCfvV9w5puRsoyZz3HxEOh.F5x1nklAXdzZ5VxfAbn.6t55AlMvG', '2025-08-21 18:45:20', NULL, '2025-08-21 18:47:52', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (46, 10, 1, 'member', 'uploads/profiles/1756038903_dbe05e72acd1596f59f5.jpeg', 'AINI NAZARA ', 'aininaza1', 'aininaza1', '082163303900', 'aininaza1@gmail.com', 'Aceh', 'active', '$2y$10$N4BGi5lOqxTig7UDt0KUneoVxegaRF0twU6mcP4ajiCbSmGv/RoYa', '2025-08-21 19:51:14', NULL, '2025-08-24 19:35:03', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (47, 45, 1, 'member', 'uploads/profiles/user.png', 'Justinus Tamauka', 'justinus', 'justinus', '081220888005', 'justinus.best8888@gmail.com', 'Bandung', 'active', '$2y$10$hK9zdUSEM4Q.gT.ZjRaxY.hY98NAAmDSZUDb6Jv9EdzCc9C18C03i', '2025-08-21 21:42:26', NULL, '2025-08-21 21:42:26', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (48, 1, 2, 'member', 'uploads/profiles/1755827742_d7c9c896edbe3f26128e.jpeg', 'Dede Yusup Jaelani', 'deyus1208', 'deyus1208', '085189720898', 'dedeyus1208@gmail.com', 'Cianjur', 'active', '$2y$10$bzjY8BaIBvs/tFhWAHluGOYss5.xB2tbJAoYhUfBxy5nkGM0W03TS', '2025-08-22 08:53:50', NULL, '2025-08-22 08:55:42', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (49, 1, 2, 'member', 'uploads/profiles/user.png', 'TAUFIK HIDAYAT', 'startaufikbgn', 'startaufikbgn', '0881022740070', 'opik00610@gmail.com', 'Garut', 'active', '$2y$10$ZaHYykO/OdrjrLcCKw6EDOeZjzBVAX4nN7YMb.FtPirjxWiBbrp8y', '2025-08-22 10:24:42', NULL, '2025-09-04 15:18:05', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (50, 45, 2, 'member', 'uploads/profiles/user.png', 'rubiyanti', 'rubiyanti', 'rubiyanti', '085604032023', 'rubiyanti969@gmail.com', 'jombang', 'active', '$2y$10$QLBmlPCYNtPv0J4S5CAydeHwgxjP9TwM7G17.Ks3wBoC.AUxyxhqC', '2025-08-22 10:26:31', NULL, '2025-08-22 10:27:37', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (51, 45, 2, 'member', 'uploads/profiles/user.png', 'ferdiansyah m.s', 'rerdiansyah', 'ferdiansyah', '082261455572', 'ferdiansyah277@gmail.com', 'bandung barat', 'active', '$2y$10$fiCrq51qz3ytSVHRCoU0HuKFpllR9zCUiKLaplpH0m6aOQExuLxJm', '2025-08-22 10:30:27', NULL, '2025-08-22 10:37:21', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (52, 45, 1, 'member', 'uploads/profiles/user.png', 'ahmad ridwan', 'adlah', 'ahmadridwan', '0895393210907', 'ahmadridwan989@gmail.com', 'garut', 'active', '$2y$10$IAl5Hzt7BSyf6qqgp3Wt2.Onlwy4LjP.UJsrS4nHWERnU.iDRkhX2', '2025-08-22 10:33:45', NULL, '2025-08-22 10:33:45', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (53, 44, 1, 'member', 'uploads/profiles/user.png', 'AGUS', 'agus', 'agus', '085381034537', 'www.agussupriyadi.com@gmail.com', 'Lampung utara', 'active', '$2y$10$husX6O536Wm2.i06fDJJUu9.HZ6kDwbh8rbcm3kjfeeGNEsMLr5yG', '2025-08-22 10:45:25', NULL, '2025-08-22 10:45:25', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (54, 45, 1, 'member', 'uploads/profiles/1755838162_7ab8afd56b942bcda38b.jpeg', 'komarudin', 'komarudin', 'komarudin', '085771682041', 'komarudinulya03@gmail.com', 'jakarta', 'active', '$2y$10$WUOHyZg0S1ryahen4bUvnOb36i80NWuufoJV9.F5oF2zJw2KDBgbi', '2025-08-22 11:08:32', NULL, '2025-08-22 11:49:22', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (55, 49, 2, 'member', 'uploads/profiles/user.png', 'Ergi sagitarius', 'egisagitariusbgn', 'egisagitariusbgn', '085724665323', 'ergybary@gmail.com', 'kp cikalong hilir rt 02 rw 23 ds.lamajang kec.pangalengan kab.bandung', 'active', '$2y$10$MSRVSiEHBfyu957jl9wQaO9otoO2mX2X1qkZ/jxQ03thc8vW3720y', '2025-08-22 13:00:27', NULL, '2025-08-22 13:40:33', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (56, 49, 2, 'member', 'uploads/profiles/user.png', 'SARNI', 'sarnibgn', 'sarnibgn', '08121797790', 'rina2910@gmail.com', 'kp sukoharjort 01 rw 8 ds.mlangen kec.polokarto kab sukoharjo', 'active', '$2y$10$5m4o8Cmopa4v416fwQTl2.B061faGuloNS0h2bKeNLxv1hYzyhjta', '2025-08-22 13:16:45', NULL, '2025-08-22 13:41:17', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (57, 49, 1, 'member', 'uploads/profiles/user.png', 'Jumali', 'jumalibgn', 'jumalibgn', '082221229266', 'jumalialfatih@07gmail.com', 'Dk. Kenteng Rt.15 Rw. 05 Ds. Jambangan Kec. Bawang Kab. Batang . JawaTengah', 'active', '$2y$10$psME.rliQTHEE6LadT.Od.i6Xij.alPb3aZK5RcAbvj5mig0P0JmO', '2025-08-22 13:32:24', NULL, '2025-08-22 13:32:24', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (58, 44, 1, 'member', 'uploads/profiles/user.png', 'Sumardi', 'ehajulaeha', 'ehajulaeha', '087745526873', 'eha63610@gmail.com', 'Jakarta', 'active', '$2y$10$HoMA04ZHk/U8eqiZ.r2KZu7B97lOQ14j.uMVfr4jQnt2gI6UDyNNm', '2025-08-22 14:23:47', NULL, '2025-08-22 14:23:47', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (59, 49, 2, 'member', 'uploads/profiles/user.png', 'AGUS HAMBALI', 'agusbgn', 'agusbgn', '085338367652', 'agushambali546@gmail.com', 'GARUT JAWA BARAT', 'active', '$2y$10$zuV81vn6Ge8rfz9XQ5WPx.JsHcX.VQCJp90ic3u2/m4efJBO4KWR.', '2025-08-22 17:42:17', NULL, '2025-08-22 17:45:06', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (60, 49, 2, 'member', 'uploads/profiles/user.png', 'HASBI MUZAKI', 'hasbibgn', 'hasbibgn', '085724740663', 'hasbimuzaki742@gmail.com', 'GARUT JAWA BARAT', 'active', '$2y$10$sReq3.nP/snJ1FULG/70TuTE54it2knjcSwi7jb0l5f26C/DozCLq', '2025-08-22 17:59:58', NULL, '2025-08-22 18:48:11', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (61, 49, 2, 'member', 'uploads/profiles/user.png', 'IRMA LISTYANING JANNA', 'irmabgn', 'irmabgn', '089607004539', 'irmalistyaningzanna@gmail.com', 'Dk. Kenteng Rt. 15 Rw.05 Ds. Jambangan Kec. Bawang Kab. Batang', 'active', '$2y$10$.BjLR.NeX81zf/UjXyzxkuzQ2HhBZ0PnIWoXDF1doleVAVKSnnrK6', '2025-08-22 18:06:52', NULL, '2025-08-22 18:49:26', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (62, 6, 2, 'member', 'uploads/profiles/user.png', 'Hamzah Manaf', 'hamzahbgn', 'hamzahbgn', '081219407969', 'hamzahchannel72@gmail.com', 'Lampung ', 'active', '$2y$10$dRE5crySttl0D83sU1j1EOexGnDxLWylnFfU2xBIfoy7rB9MOhbDy', '2025-08-22 18:09:03', NULL, '2025-08-22 18:43:02', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (63, 6, 1, 'member', 'uploads/profiles/user.png', 'Nurul Munawwarah', 'kustantobgn', 'kustantobgn', '08134758543', 'ummifatih.nm@gmail.com', 'Jawa Timur ', 'active', '$2y$10$gnv2LjLUM/qj1vNNZhmiseJtZxxzrZTsBTbve2jbW3SxAhjhMQyWO', '2025-08-22 18:14:05', NULL, '2025-08-22 18:14:05', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (64, 6, 2, 'member', 'uploads/profiles/user.png', 'Widodo', 'widodobgn', 'widodobgn', '081802899049', 'widodo.ws1969@gmail.com', 'Jawa Timur ', 'active', '$2y$10$wqDM30GRtty3eknXFf0XRu46GLek3J8evL/T1K/TeVV290Ipgd5/.', '2025-08-22 18:16:24', NULL, '2025-08-22 18:44:50', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (65, 6, 2, 'member', 'uploads/profiles/1755940249_83e3f4e0878b91b4d34b.jpeg', 'Muhamad Setyo Utomo', 'setyobgn', 'setyobgn', '085694942700', 'setyoutomooo@gmail.com', 'Bekasi ', 'active', '$2y$10$V2myRwDxTgBo7ukgOK4yfuLCwCJp1ssPd0phjwfIM3HkGAh772s3.', '2025-08-22 18:18:36', NULL, '2025-08-23 16:10:49', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (66, 6, 2, 'member', 'uploads/profiles/1755863492_a2f07489bc57290fea11.jpeg', 'Riswan Haris', 'riswanharisbgn', 'riswanharisbgn', '085399141829', 'riswanharis91@gmail.com', 'Sulawesi ', 'active', '$2y$10$avV9J2F4E4vu8Tr6B/qEGOgURkjwAyYzW5cMGDn8neJNoJhwtMdU6', '2025-08-22 18:22:10', NULL, '2025-08-22 18:51:32', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (67, 49, 2, 'member', 'uploads/profiles/user.png', 'Aliyamuna muthiah', 'aliyamunabgn', 'aliyamunabgn', '085782294409', 'aliyamunamuthiah@gmail.com', 'Batang jawa tengah', 'active', '$2y$10$9oQ3SPD8/8GOTM56847kfOXD7YNnClLQMNhRWTqTJ2jGmhqnhBlCq', '2025-08-22 18:27:18', NULL, '2025-08-22 18:50:04', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (68, 67, 1, 'member', 'uploads/profiles/user.png', 'Alyamuna Muthiah', 'alyamuna', 'alyamuna', '085782294409', 'alyamuna345@gmail.com', 'dk.sikunir, ds.jlamprang, kec.bawang, kab.batang', 'active', '$2y$10$s3aXuviBqoNlUXX6LAxXwe42Tpoj4ISmHe6xfHuEREchU4bC5Y0A2', '2025-08-22 19:39:45', NULL, '2025-08-22 19:39:45', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (69, 48, 2, 'member', 'uploads/profiles/user.png', 'Rusman Dahalik', 'rusmanbgn', 'rusmanbgn', '081263827089', 'imel.rusmandahalik@gmail.com', 'Ds Tegal Sari Kec Natal Kab Mandailing Natal Prov Sumatera Utara', 'active', '$2y$10$YkL7.y.G9rZOx5oCV5aGK.5TcpO5m5xiRs4JTRIVUDCMSOOSzUILW', '2025-08-23 10:23:30', NULL, '2025-08-23 10:27:17', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (70, 48, 2, 'member', 'uploads/profiles/user.png', 'Usman', 'bg0022745', 'usman', '087839004262', 'musman010766@gmail.com', 'Taman Melati Indah A19 rt 02 rw 09 kel. Duren Mekar Kec.Bojongsari Kota Depok Jawa Barat', 'active', '$2y$10$Bsk0wPY0.3jTnPN5MQ3PNeMcLlAZUgrjIz767roY0YW7gOTFQUPDK', '2025-08-23 10:25:30', NULL, '2025-08-23 10:27:09', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (71, 35, 2, 'member', 'uploads/profiles/user.png', 'Cahaya ', 'bd0020102', 'bd0020102', '08983900148', 'cahyaaja321@gmail.com', 'Bandung', 'active', '$2y$10$L62jI1ljpDxaj8.KpWZz3OEK1F4VxFT9AW8M47V9zFp23kbb1afYm', '2025-08-23 10:37:18', NULL, '2025-08-23 10:45:41', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (72, 48, 1, 'member', 'uploads/profiles/user.png', 'suciati trimartiningsih ', 'suciati', 'suciati', '082130960774', 'suciatitrimartiningsih9@gmail.com', 'jl pacing selatan RT 2/06 dewisari Rengasdengklok Karawang', 'active', '$2y$10$D/WFA3xmAWsGCpN3P2hQZeDCyrSrhPA3mm1idk/7uFk4HaLVKsg1S', '2025-08-23 13:04:08', NULL, '2025-08-23 13:04:08', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (73, 48, 1, 'member', 'uploads/profiles/user.png', 'Aris munandar', 'arismunandar', 'arismunandar', '085219394020', 'arismunandarr17@gmail.com', 'NTB', 'active', '$2y$10$07KXgQpYZsCcK1aqjyQWNujksQILBlJlKTL9bfKBF9hKF3T3tY2z2', '2025-08-23 13:11:40', NULL, '2025-08-23 13:11:40', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (74, 35, 2, 'member', 'uploads/profiles/user.png', 'IBRAHIM TAKA BOLI', 'bd0008618', 'bd0008618', '082125624597', 'takaibrahim606@gmail.com', 'BANDUNG', 'active', '$2y$10$l7hBs6.YeeaMUZyKxxzLqOfIu/b8UHgPXdZR/wIX5pifzneLxeTaG', '2025-08-23 16:36:13', NULL, '2025-08-24 12:52:29', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (75, 44, 1, 'member', 'uploads/profiles/user.png', 'Samingan', 'samjngan', 'samingan', '085780638691', 'ahmadsamingan873@gmail.com', 'Cilacap', 'active', '$2y$10$0PkuioPZYpQm1w49BQh86O4G4dybCpGQGWrh9FCjJSEGqGfz5e0Ym', '2025-08-24 20:29:14', NULL, '2025-08-24 20:29:14', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (76, 48, 2, 'member', 'uploads/profiles/1756091564_de6bcef36a589fdbd8e2.jpeg', 'Justinus Tamauka', 'justinus88', 'justinus88', '081220888005', 'justinus.best8888@gmail.com', 'Bandung', 'active', '$2y$10$PE2LSZv359pLUNThXXD.l.Wzpj1KfO24.j1G2UPrCRAr89czjahPy', '2025-08-25 10:08:50', NULL, '2025-08-25 10:12:44', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (77, 35, 2, 'member', 'uploads/profiles/1756097748_5c740492c33998e2e02b.jpeg', 'Iriandi Nanda Irawan ', 'b0023553', 'nanda123', '081263641979', 'nandairiandi243@gmail.com', 'Sumatera Utara ', 'active', '$2y$10$SHkKs4FAB7Jr4ymYvkUI/OHUlGVlz3g9b.PnM0m7baOeza.vjYEFO', '2025-08-25 11:20:23', NULL, '2025-08-29 10:44:06', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (78, 10, 2, 'member', 'uploads/profiles/1756175939_4b46acc33b2f182a46c7.jpeg', 'Surya Darma Dalimunthe ', 'darmabgn', 'darma', '082135283445', 'suryadarmaaa1021@gmail.com', 'Rantau Prapat ', 'active', '$2y$10$8Vxt9WZ45y9Jmf67DAN4EOYAj2r0aV18vDw1ovp.SmjmWNpzg1pV.', '2025-08-25 23:44:03', NULL, '2025-08-26 09:38:59', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (79, 48, 2, 'member', 'uploads/profiles/1756226909_8e2127ad0eaf95db102d.jpeg', 'Muhamad Muhdi', 'muhdi165', 'muhdi165', '081385256074', 'muhamadmuhditqn165@gmail.com', 'Kp. Babakan Balong Rt 003 Rw 016\r\nDesa cibedug\r\nKec rongga\r\nKab bandung barat', 'active', '$2y$10$Cqu1uM0aAPLyOYJ/5KlqguLF73kvS2PfI3C8g0pXet5UY74ZxVW8C', '2025-08-26 23:45:04', NULL, '2025-08-26 23:48:29', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (80, 2, 1, 'member', 'uploads/profiles/user.png', 'Gilang ramadhan', 'bg006169', 'gilang01', '085780430590', 'gilang01@gmail.com', 'Cianjur', 'active', '$2y$10$p6kgHy0EvThJnqzRJeAL5OYSN6fU/Giua07t730Qjp.2x2Da4uZmS', '2025-08-29 13:04:45', NULL, '2025-08-29 15:23:37', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (81, 1, 2, 'member', 'uploads/profiles/user.png', 'Untung Setiawan', 'bd0000061', 'bgnuntung', '082130130088', 'untung.bdg05@gmail.com', 'Bandung', 'active', '$2y$10$/T1TGIlWZmRzCWfuguRy1OdkYn91ZuY1oKS0jn2Cg9q5V4mv4QJou', '2025-08-29 14:51:43', NULL, '2025-08-31 07:48:46', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (82, 35, 2, 'member', 'uploads/profiles/user.png', 'Lukman sukmawan', 'bd0023585', 'bd0023585', '081541514688', 'lukmansukmawan3@gmail.com', 'Lampung', 'active', '$2y$10$Js8y00a9mziWNjNXU4Juu.EowZDG.hFeNKJuX8qrS6yCAbDgZllKi', '2025-08-30 16:26:30', NULL, '2025-08-30 17:18:09', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (83, 82, 1, 'member', 'uploads/profiles/user.png', 'M.Yazid', 'bd0024872', 'bd0024872', '083857874929', 'kiagusyazid@gmail.com', 'Palembang', 'pending', '$2y$10$SVmQOKlRdc4pTNRf5f4Y1OGaLeKARIKUTah8hlMKrxBD07dqv.Xc2', '2025-08-31 08:54:47', NULL, '2025-08-31 08:54:47', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (84, 35, 1, 'member', 'uploads/profiles/user.png', 'Nugraha F', 'bd0023558', 'bd0023558', '089508899556', 'pnugraha885@gmail.com', 'Magelang', 'pending', '$2y$10$BPGteoXHg.NISpqKczxY8u4Va061IgtOx2hzkFSyAZ.gsG5j3sCKG', '2025-09-03 16:46:16', NULL, '2025-09-03 16:46:16', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (85, 8, 1, 'member', 'uploads/profiles/user.png', 'FENI NOPIYANTI ', 'bd0025595', 'fenibgn', '082277540908', 'feninopiyantibgn28@gmail.com', 'Pasaman Barat Sumatera Barat ', 'active', '$2y$10$nPFqL0IMn/R5NGs2YmYSnOnIpAqASk6Ae1JOLx4pJGwGWGXKSiFpm', '2025-09-10 12:45:58', NULL, '2025-09-10 14:04:59', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (86, 8, 1, 'member', 'uploads/profiles/user.png', 'SUWARNO', 'bg0025582', 'warnobgn', '085367018192', 'suwarno@mail.com', 'Rokan Hilir ', 'active', '$2y$10$/UKyfdnf9.fcpUjotPTKs.7RkkW0QG2u4GNxIWpoFneClnvgIKHP2', '2025-09-10 13:01:22', NULL, '2025-09-10 14:05:26', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (87, 48, 2, 'member', 'uploads/profiles/1758701035_16987dddb82d22ac3c75.jpeg', 'Muhammad Darwin Pohan', 'bd0015966', 'darwin', '085277775901', 'darwinpohan82@gmail.com', 'DESA BATU SONDAT ,Kec BATAHAN ,Kab Mandiling Natal', 'active', '$2y$10$0/T.zLmzvxYl.bPSOXHmAuovVmjn3q89BRsaeekLA5TLrIbOwenL.', '2025-09-15 17:15:45', NULL, '2025-09-24 15:03:55', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (88, 44, 1, 'member', 'uploads/profiles/user.png', 'Erwan', 'rg0025872', 'httpsstarcommunityidreferwanhttps', '085817290822', 'setiawanerwan861@gmail.com', 'Bandung', 'pending', '$2y$10$1EYCSWowfZhaXhzYXHjUqODn.gurFcIfMSW5qNoYT3gNFhRIEiSGK', '2025-11-11 22:24:43', NULL, '2025-11-11 22:24:43', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (89, 44, 1, 'member', 'uploads/profiles/user.png', 'Erwan', 'rg0025871', 'erwan', '085817290822', 'setiawanerwan861@gmail.com', 'Pandeglang banten', 'pending', '$2y$10$mv2hCcctlpES9LPaeoJ63.r5.SOrjWesqgzFdyJORTjjjWt5Bshtq', '2025-11-11 22:39:25', NULL, '2025-11-11 22:39:25', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (1, NULL, 2, 'admin', 'uploads/profiles/user.png', 'Aura Cellin', 'starcom', 'admin', '628131380797', 'admin@mail.com', 'jalan raya', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2023-03-27 13:38:28', 0, '2025-08-21 08:44:16', 1, NULL, NULL);
+INSERT INTO `users` VALUES (2, 1, 2, 'member', 'uploads/profiles/user.png', 'Gilang ramadhan', NULL, 'user', '082127796455', 'gilangrmd2719@gmail.com', 'Cianjur', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-01 14:08:30', 1, '2025-08-06 20:22:53', 2, NULL, NULL);
+INSERT INTO `users` VALUES (3, 2, 2, 'member', 'uploads/profiles/user.png', 'Dede Yusup Jaelani', 'deyus12', 'deyus12', '085189720898', 'dedeyus1208@gmail.com', 'ciranjang', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-14 15:33:19', 2, '2025-08-20 21:20:19', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (4, 2, 1, 'member', 'uploads/profiles/user.png', 'Gilang Ramadhan', 'gilang', 'gilang', '082127796455', 'gilangrdm2719@gmail.com', 'Cianjur', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-14 15:37:46', 2, '2025-08-14 15:37:46', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (5, 2, 1, 'member', 'uploads/profiles/user.png', 'Rudi', 'rudi27', 'rudi27', '08521616784648', 'rudi@gmail.com', 'Garut', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-17 20:35:18', NULL, '2025-08-17 20:35:18', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (6, 1, 2, 'member', 'uploads/profiles/user.png', 'Imam Safii Rambe ', 'bgnimam', 'bgnimam', '081315388799', 'safiirambei1@gmail.com', 'Medan', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 20:47:20', NULL, '2025-08-20 20:56:53', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (7, 6, 2, 'member', 'uploads/profiles/user.png', 'Nardi', 'nardi', 'nardi', '082289752557', 'nardii1985@gmail.com', 'Padang', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 21:39:51', NULL, '2025-08-21 14:29:30', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (8, 6, 2, 'member', 'uploads/profiles/user.png', 'Mhd. Rosyadi Hs', 'sultankerinci2025', 'sultankerinci2025', '085777991979', 'khoirulumrihasibuan7@gmail.com', 'Pekanbaru ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 22:23:56', NULL, '2025-09-21 22:00:34', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (9, 6, 1, 'member', 'uploads/profiles/user.png', 'Dwi Niko Ardi', 'nikobgn', 'nikobgn', '085261712413', 'dwinikokgprtp@gmail.com', 'Medan ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 22:28:32', NULL, '2025-08-20 23:03:04', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (10, 6, 2, 'member', 'uploads/profiles/user.png', 'Ahmad Rudi Rambe  ', 'rudibgn', 'rudibgn', '082241312105', 'rudirambe140888@gmail.com', 'Medan', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 22:32:11', NULL, '2025-08-21 15:45:32', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (11, 1, 2, 'member', 'uploads/profiles/user.png', 'Ari Wijaya', 'ariwijaya', 'ariwijaya', '082121203926', 'ariwwijaya@gmail.com', 'jl rawa kalong RT04 rw10 kelurahan limo kecamatan Grogol kota depok', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 22:39:56', NULL, '2025-08-21 11:32:25', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (12, 6, 2, 'member', 'uploads/profiles/user.png', 'Toga syaprudin', 'togabgn', 'togabgn', '085882311521', 'togasyaprudin@gmail.com', 'Jakarta ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 22:40:29', NULL, '2025-08-20 22:41:52', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (13, 6, 2, 'member', 'uploads/profiles/user.png', 'Riswan', 'riswanbgn', 'riswanbgn', '085894925413', 'hakimriswan989@gmail.com', 'Jakarta Barat ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 22:44:10', NULL, '2025-08-20 22:45:50', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (14, 6, 2, 'member', 'uploads/profiles/user.png', 'Maryoto', 'maryotobgn', 'maryotobgn', '085216908045', 'maryotoyoto56@gmail.com', 'Jakarta ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 22:48:27', NULL, '2025-08-20 23:40:31', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (15, 1, 2, 'member', 'uploads/profiles/user.png', 'Indra Depriyoga Rachman', 'indradep', 'indradep', '089515297801', 'depriyogaindra@gmail.com', 'jl karasak utara 1', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 23:09:59', NULL, '2025-08-21 08:24:52', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (16, 6, 2, 'member', 'uploads/profiles/user.png', 'Tajul Maimun ', 'tajulbgn', 'tajulbgn', '088223936058', 'maimuntajul3@gmail.com', 'Padang ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 23:10:58', NULL, '2025-08-21 09:03:21', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (17, 6, 2, 'member', 'uploads/profiles/user.png', 'Hamini', 'haminibgn', 'haminibgn', '085711335011', 'haminigold2017@gmail.com', 'Jakarta ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-20 23:14:21', NULL, '2025-08-21 12:56:35', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (18, 8, 2, 'member', 'uploads/profiles/user.png', 'Hermawan', 'hermanbgn', 'hermanbgn', '082172357514', 'megakembara7356@gmail.com', 'Bengkulu ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 00:11:15', NULL, '2025-08-24 23:57:50', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (19, 8, 2, 'member', 'uploads/profiles/user.png', 'Samsul Hadi', 'hadibgn', 'hadibgn', '087859463356', 'samsulhadi4580@gmail.com', 'Kediri Jawa Timur ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 05:38:51', NULL, '2025-08-21 07:57:44', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (20, 6, 2, 'member', 'uploads/profiles/user.png', 'Hasan Arifin', 'hasanbgn', 'hasanbgn', '085779517848', 'hasan.arifin30@gmail.com', 'Bekasi ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 05:40:40', NULL, '2025-08-22 08:01:46', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (21, 6, 2, 'member', 'uploads/profiles/user.png', 'Ibnu Abdulah ', 'ibnubgn', 'ibnubgn', '085218507295', 'ibnuabdullah1991@gmail.com', 'Sulawesi ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 05:44:31', NULL, '2025-08-21 09:35:07', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (22, 8, 2, 'member', 'uploads/profiles/user.png', 'Siti Khoiriah Hasibuan ', 'khoiriahbgn', 'khoiriahbgn', '08557011979', 'hasibuansitikhoiriah67@gmail.com', 'Medan', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 05:47:42', NULL, '2025-08-21 07:59:39', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (23, 8, 2, 'member', 'uploads/profiles/user.png', 'Wildan Ansori Hasibuan ', 'ansorbgn', 'ansorbgn', '081511121279', 'wildanansorihasibuan855@gmail.com', 'Medan', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 05:52:36', NULL, '2025-08-22 14:07:19', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (24, 8, 2, 'member', 'uploads/profiles/user.png', 'Munjali', 'munjalibgn', 'munjalibgn', '087855873009', 'munjali.abdurrahman@gmail.com', 'Surabaya ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 05:57:04', NULL, '2025-08-21 08:02:30', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (25, 8, 2, 'member', 'uploads/profiles/user.png', 'Hasrul', 'hasrulbgn', 'hasrulbgn', '08219343881', 'hasrulpolman159@gmail.com', 'Polewali Mandar ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 06:00:48', NULL, '2025-08-21 08:03:19', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (26, 8, 2, 'member', 'uploads/profiles/user.png', 'Eka Guspita ', 'ekabgn', 'ekabgn', '081276354947', 'ekaguspita5@gmail.com', 'Pelalawan Riau ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 06:03:59', NULL, '2025-08-21 08:04:51', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (27, 8, 2, 'member', 'uploads/profiles/user.png', 'Hartina ', 'tinabgn', 'tinabgn', '085337044143', 'tyna48736@gmail.com', 'Morowali ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 06:08:18', NULL, '2025-08-21 08:05:39', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (28, 8, 2, 'member', 'uploads/profiles/user.png', 'Haris SP', 'harisbgn', 'harisbgn', '085398244185', 'harisbgn', 'Morowali ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 06:11:23', NULL, '2025-08-23 05:51:01', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (29, 8, 2, 'member', 'uploads/profiles/user.png', 'Rupika', 'vikabgn', 'vikabgn', '085148479730', 'rupikayolanda49@gmail.com', 'Ketapang Kalimantan Barat ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 06:14:30', NULL, '2025-08-21 08:07:51', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (30, 8, 2, 'member', 'uploads/profiles/user.png', 'Rika Dewita', 'rikabgn', 'rikabgn', '082190448494', 'dd6142810@gmail.com', 'Bengkulu ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 06:18:35', NULL, '2025-08-21 08:57:41', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (31, 6, 2, 'member', 'uploads/profiles/user.png', 'Sartati br Marbun ', 'darwinbgn', 'darwinbgn', '082170462938', 'darwinpurba81gmail.com', 'Batam ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 07:05:55', NULL, '2025-08-21 08:09:17', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (32, 1, 2, 'member', 'uploads/profiles/user.png', 'Kang Ajie Alfateh', 'mst001', 'mst001', '081312573373', 'antusias9119@gmail.com', 'KOMPLEK LISVIE VILLAGE, \r\nJl. Cijeruk. D2- 25 , Bojongsari, Kec. Bojongsoang, Kabupaten Bandung, Jawa Barat 40288', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 09:07:36', NULL, '2025-08-21 09:09:52', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (33, 10, 2, 'member', 'uploads/profiles/user.png', 'ANI PUJIATI ', 'pujiati', 'pujiati', '082221252471', 'anipuji004@gmail.com', 'Banyumas', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 09:34:06', NULL, '2025-08-21 10:27:20', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (34, 10, 2, 'member', 'uploads/profiles/user.png', 'IBNU ABDULLAH ', 'ibnu', 'ibnu', '085218507295', 'ibnuabdullah1991@gmail.com', 'Kalimantan Barat ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 09:43:41', NULL, '2025-08-21 10:28:12', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (35, 1, 2, 'member', 'uploads/profiles/user.png', 'Wawan', 'bd0006975', 'bd0006975', '083114021611', 'abunyaalfath@gmail.com', 'bandung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 15:33:03', NULL, '2025-08-21 15:46:40', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (36, 10, 2, 'member', 'uploads/profiles/user.png', 'HASYIM SIREGAR ', 'hasyim', 'hasyim', '085277149777', 'hasyimsiregarh@gmail.com', 'Rantau Prapat ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 15:34:43', NULL, '2025-08-21 15:41:30', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (37, 1, 2, 'member', 'uploads/profiles/user.png', 'Asep Gartina', 'asepgartina', 'asepgartina', '081901117167', 'asepgartina11@gmail.com', 'Situgunting timur RT 04/08 Bandung Jawa Barat', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 15:43:55', NULL, '2025-08-21 15:45:02', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (38, 6, 2, 'member', 'uploads/profiles/user.png', 'muhamad taufiq firmansyah', 'taufiqbgn', 'taufiqbgn', '081372678007', 'taufiq82.firmansyah@gmail.com', 'Batam', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 16:34:14', NULL, '2025-08-26 22:47:18', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (39, 37, 1, 'member', 'uploads/profiles/user.png', 'Asep gartina', 'starasep', 'starasep', '081901117167', 'asepgartina11@gmail.com', 'Situgunting timur RT 04/08 Bandung ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 16:45:08', NULL, '2025-08-21 17:21:36', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (40, 6, 2, 'member', 'uploads/profiles/user.png', 'SELPIUS', 'selpiusbgn', 'selpiusbgn', '081382085236', 'www.piusselpius@gmail.com', 'Sulawesi ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 16:47:21', NULL, '2025-08-21 17:05:42', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (41, 37, 1, 'member', 'uploads/profiles/user.png', 'Asep gartina', 'bgn', 'bgn', '081901117167', 'asepgartina11@gmail.com', 'Situgunting timur GG ma arum RT 04 RW 08', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 17:17:30', NULL, '2025-08-21 17:17:30', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (42, 1, 2, 'member', 'uploads/profiles/user.png', 'Fikri Awaluddin', 'fikriaz', 'fikriaz', '089675600745', 'fikriawaluddin0884@gmail.com', 'Bantargebang Kota Bekasi', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 17:25:34', NULL, '2025-08-21 17:29:25', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (43, 6, 2, 'member', 'uploads/profiles/user.png', 'Rudi Riswanto ', 'rudiantobgn', 'rudiantobgn', '081375880977', 'rudibest683@gmail.com', 'Bandung ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 17:38:58', NULL, '2025-08-21 18:30:36', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (44, 1, 2, 'member', 'uploads/profiles/user.png', 'Atikah', 'bd0013610', 'atikah', '081385880977', 'rudibest683@gmail.com', 'Garut', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 18:28:22', NULL, '2025-08-21 18:34:09', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (45, 1, 2, 'member', 'uploads/profiles/user.png', 'Soni Mustopa Saputra ', 'sonidestinator', 'sonidestinator', '085864783787', 'soni.mustopa@gmail.com', 'Bandung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 18:45:20', NULL, '2025-08-21 18:47:52', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (46, 10, 1, 'member', 'uploads/profiles/user.png', 'AINI NAZARA ', 'aininaza1', 'aininaza1', '082163303900', 'aininaza1@gmail.com', 'Aceh', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 19:51:14', NULL, '2025-08-24 19:35:03', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (47, 45, 1, 'member', 'uploads/profiles/user.png', 'Justinus Tamauka', 'justinus', 'justinus', '081220888005', 'justinus.best8888@gmail.com', 'Bandung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-21 21:42:26', NULL, '2025-08-21 21:42:26', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (48, 1, 2, 'member', 'uploads/profiles/user.png', 'Dede Yusup Jaelani', 'deyus1208', 'deyus1208', '085189720898', 'dedeyus1208@gmail.com', 'Cianjur', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 08:53:50', NULL, '2025-08-22 08:55:42', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (49, 1, 2, 'member', 'uploads/profiles/user.png', 'TAUFIK HIDAYAT', 'startaufikbgn', 'startaufikbgn', '0881022740070', 'opik00610@gmail.com', 'Garut', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 10:24:42', NULL, '2025-09-04 15:18:05', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (50, 45, 2, 'member', 'uploads/profiles/user.png', 'rubiyanti', 'rubiyanti', 'rubiyanti', '085604032023', 'rubiyanti969@gmail.com', 'jombang', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 10:26:31', NULL, '2025-08-22 10:27:37', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (51, 45, 2, 'member', 'uploads/profiles/user.png', 'ferdiansyah m.s', 'rerdiansyah', 'ferdiansyah', '082261455572', 'ferdiansyah277@gmail.com', 'bandung barat', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 10:30:27', NULL, '2025-08-22 10:37:21', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (52, 45, 1, 'member', 'uploads/profiles/user.png', 'ahmad ridwan', 'adlah', 'ahmadridwan', '0895393210907', 'ahmadridwan989@gmail.com', 'garut', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 10:33:45', NULL, '2025-08-22 10:33:45', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (53, 44, 1, 'member', 'uploads/profiles/user.png', 'AGUS', 'agus', 'agus', '085381034537', 'www.agussupriyadi.com@gmail.com', 'Lampung utara', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 10:45:25', NULL, '2025-08-22 10:45:25', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (54, 45, 1, 'member', 'uploads/profiles/user.png', 'komarudin', 'komarudin', 'komarudin', '085771682041', 'komarudinulya03@gmail.com', 'jakarta', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 11:08:32', NULL, '2025-08-22 11:49:22', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (55, 49, 2, 'member', 'uploads/profiles/user.png', 'Ergi sagitarius', 'egisagitariusbgn', 'egisagitariusbgn', '085724665323', 'ergybary@gmail.com', 'kp cikalong hilir rt 02 rw 23 ds.lamajang kec.pangalengan kab.bandung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 13:00:27', NULL, '2025-08-22 13:40:33', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (56, 49, 2, 'member', 'uploads/profiles/user.png', 'SARNI', 'sarnibgn', 'sarnibgn', '08121797790', 'rina2910@gmail.com', 'kp sukoharjort 01 rw 8 ds.mlangen kec.polokarto kab sukoharjo', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 13:16:45', NULL, '2025-08-22 13:41:17', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (57, 49, 1, 'member', 'uploads/profiles/user.png', 'Jumali', 'jumalibgn', 'jumalibgn', '082221229266', 'jumalialfatih@07gmail.com', 'Dk. Kenteng Rt.15 Rw. 05 Ds. Jambangan Kec. Bawang Kab. Batang . JawaTengah', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 13:32:24', NULL, '2025-08-22 13:32:24', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (58, 44, 1, 'member', 'uploads/profiles/user.png', 'Sumardi', 'ehajulaeha', 'ehajulaeha', '087745526873', 'eha63610@gmail.com', 'Jakarta', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 14:23:47', NULL, '2025-08-22 14:23:47', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (59, 49, 2, 'member', 'uploads/profiles/user.png', 'AGUS HAMBALI', 'agusbgn', 'agusbgn', '085338367652', 'agushambali546@gmail.com', 'GARUT JAWA BARAT', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 17:42:17', NULL, '2025-08-22 17:45:06', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (60, 49, 2, 'member', 'uploads/profiles/user.png', 'HASBI MUZAKI', 'hasbibgn', 'hasbibgn', '085724740663', 'hasbimuzaki742@gmail.com', 'GARUT JAWA BARAT', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 17:59:58', NULL, '2025-08-22 18:48:11', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (61, 49, 2, 'member', 'uploads/profiles/user.png', 'IRMA LISTYANING JANNA', 'irmabgn', 'irmabgn', '089607004539', 'irmalistyaningzanna@gmail.com', 'Dk. Kenteng Rt. 15 Rw.05 Ds. Jambangan Kec. Bawang Kab. Batang', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 18:06:52', NULL, '2025-08-22 18:49:26', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (62, 6, 2, 'member', 'uploads/profiles/user.png', 'Hamzah Manaf', 'hamzahbgn', 'hamzahbgn', '081219407969', 'hamzahchannel72@gmail.com', 'Lampung ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 18:09:03', NULL, '2025-08-22 18:43:02', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (63, 6, 1, 'member', 'uploads/profiles/user.png', 'Nurul Munawwarah', 'kustantobgn', 'kustantobgn', '08134758543', 'ummifatih.nm@gmail.com', 'Jawa Timur ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 18:14:05', NULL, '2025-08-22 18:14:05', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (64, 6, 2, 'member', 'uploads/profiles/user.png', 'Widodo', 'widodobgn', 'widodobgn', '081802899049', 'widodo.ws1969@gmail.com', 'Jawa Timur ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 18:16:24', NULL, '2025-08-22 18:44:50', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (65, 6, 2, 'member', 'uploads/profiles/user.png', 'Muhamad Setyo Utomo', 'setyobgn', 'setyobgn', '085694942700', 'setyoutomooo@gmail.com', 'Bekasi ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 18:18:36', NULL, '2025-08-23 16:10:49', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (66, 6, 2, 'member', 'uploads/profiles/user.png', 'Riswan Haris', 'riswanharisbgn', 'riswanharisbgn', '085399141829', 'riswanharis91@gmail.com', 'Sulawesi ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 18:22:10', NULL, '2025-08-22 18:51:32', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (67, 49, 2, 'member', 'uploads/profiles/user.png', 'Aliyamuna muthiah', 'aliyamunabgn', 'aliyamunabgn', '085782294409', 'aliyamunamuthiah@gmail.com', 'Batang jawa tengah', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 18:27:18', NULL, '2025-08-22 18:50:04', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (68, 67, 1, 'member', 'uploads/profiles/user.png', 'Alyamuna Muthiah', 'alyamuna', 'alyamuna', '085782294409', 'alyamuna345@gmail.com', 'dk.sikunir, ds.jlamprang, kec.bawang, kab.batang', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-22 19:39:45', NULL, '2025-08-22 19:39:45', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (69, 48, 2, 'member', 'uploads/profiles/user.png', 'Rusman Dahalik', 'rusmanbgn', 'rusmanbgn', '081263827089', 'imel.rusmandahalik@gmail.com', 'Ds Tegal Sari Kec Natal Kab Mandailing Natal Prov Sumatera Utara', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-23 10:23:30', NULL, '2025-08-23 10:27:17', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (70, 48, 2, 'member', 'uploads/profiles/user.png', 'Usman', 'bg0022745', 'usman', '087839004262', 'musman010766@gmail.com', 'Taman Melati Indah A19 rt 02 rw 09 kel. Duren Mekar Kec.Bojongsari Kota Depok Jawa Barat', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-23 10:25:30', NULL, '2025-08-23 10:27:09', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (71, 35, 2, 'member', 'uploads/profiles/user.png', 'Cahaya ', 'bd0020102', 'bd0020102', '08983900148', 'cahyaaja321@gmail.com', 'Bandung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-23 10:37:18', NULL, '2025-08-23 10:45:41', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (72, 48, 1, 'member', 'uploads/profiles/user.png', 'suciati trimartiningsih ', 'suciati', 'suciati', '082130960774', 'suciatitrimartiningsih9@gmail.com', 'jl pacing selatan RT 2/06 dewisari Rengasdengklok Karawang', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-23 13:04:08', NULL, '2025-08-23 13:04:08', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (73, 48, 1, 'member', 'uploads/profiles/user.png', 'Aris munandar', 'arismunandar', 'arismunandar', '085219394020', 'arismunandarr17@gmail.com', 'NTB', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-23 13:11:40', NULL, '2025-08-23 13:11:40', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (74, 35, 2, 'member', 'uploads/profiles/user.png', 'IBRAHIM TAKA BOLI', 'bd0008618', 'bd0008618', '082125624597', 'takaibrahim606@gmail.com', 'BANDUNG', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-23 16:36:13', NULL, '2025-08-24 12:52:29', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (75, 44, 1, 'member', 'uploads/profiles/user.png', 'Samingan', 'samjngan', 'samingan', '085780638691', 'ahmadsamingan873@gmail.com', 'Cilacap', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-24 20:29:14', NULL, '2025-08-24 20:29:14', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (76, 48, 2, 'member', 'uploads/profiles/user.png', 'Justinus Tamauka', 'justinus88', 'justinus88', '081220888005', 'justinus.best8888@gmail.com', 'Bandung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-25 10:08:50', NULL, '2025-08-25 10:12:44', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (77, 35, 2, 'member', 'uploads/profiles/user.png', 'Iriandi Nanda Irawan ', 'b0023553', 'nanda123', '081263641979', 'nandairiandi243@gmail.com', 'Sumatera Utara ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-25 11:20:23', NULL, '2025-08-29 10:44:06', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (78, 10, 2, 'member', 'uploads/profiles/user.png', 'Surya Darma Dalimunthe ', 'darmabgn', 'darma', '082135283445', 'suryadarmaaa1021@gmail.com', 'Rantau Prapat ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-25 23:44:03', NULL, '2025-08-26 09:38:59', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (79, 48, 2, 'member', 'uploads/profiles/user.png', 'Muhamad Muhdi', 'muhdi165', 'muhdi165', '081385256074', 'muhamadmuhditqn165@gmail.com', 'Kp. Babakan Balong Rt 003 Rw 016\r\nDesa cibedug\r\nKec rongga\r\nKab bandung barat', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-26 23:45:04', NULL, '2025-08-26 23:48:29', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (80, 2, 1, 'member', 'uploads/profiles/user.png', 'Gilang ramadhan', 'bg006169', 'gilang01', '085780430590', 'gilang01@gmail.com', 'Cianjur', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-29 13:04:45', NULL, '2025-08-29 15:23:37', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (81, 1, 2, 'member', 'uploads/profiles/user.png', 'Untung Setiawan', 'bd0000061', 'bgnuntung', '082130130088', 'untung.bdg05@gmail.com', 'Bandung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-29 14:51:43', NULL, '2025-08-31 07:48:46', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (82, 35, 2, 'member', 'uploads/profiles/user.png', 'Lukman sukmawan', 'bd0023585', 'bd0023585', '081541514688', 'lukmansukmawan3@gmail.com', 'Lampung', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-30 16:26:30', NULL, '2025-08-30 17:18:09', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (83, 82, 1, 'member', 'uploads/profiles/user.png', 'M.Yazid', 'bd0024872', 'bd0024872', '083857874929', 'kiagusyazid@gmail.com', 'Palembang', 'pending', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-08-31 08:54:47', NULL, '2025-08-31 08:54:47', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (84, 35, 1, 'member', 'uploads/profiles/user.png', 'Nugraha F', 'bd0023558', 'bd0023558', '089508899556', 'pnugraha885@gmail.com', 'Magelang', 'pending', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-09-03 16:46:16', NULL, '2025-09-03 16:46:16', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (85, 8, 1, 'member', 'uploads/profiles/user.png', 'FENI NOPIYANTI ', 'bd0025595', 'fenibgn', '082277540908', 'feninopiyantibgn28@gmail.com', 'Pasaman Barat Sumatera Barat ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-09-10 12:45:58', NULL, '2025-09-10 14:04:59', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (86, 8, 1, 'member', 'uploads/profiles/user.png', 'SUWARNO', 'bg0025582', 'warnobgn', '085367018192', 'suwarno@mail.com', 'Rokan Hilir ', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-09-10 13:01:22', NULL, '2025-09-10 14:05:26', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (87, 48, 2, 'member', 'uploads/profiles/user.png', 'Muhammad Darwin Pohan', 'bd0015966', 'darwin', '085277775901', 'darwinpohan82@gmail.com', 'DESA BATU SONDAT ,Kec BATAHAN ,Kab Mandiling Natal', 'active', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-09-15 17:15:45', NULL, '2025-09-24 15:03:55', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (88, 44, 1, 'member', 'uploads/profiles/user.png', 'Erwan', 'rg0025872', 'httpsstarcommunityidreferwanhttps', '085817290822', 'setiawanerwan861@gmail.com', 'Bandung', 'pending', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-11-11 22:24:43', NULL, '2025-11-11 22:24:43', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (89, 44, 1, 'member', 'uploads/profiles/user.png', 'Erwan', 'rg0025871', 'erwan', '085817290822', 'setiawanerwan861@gmail.com', 'Pandeglang banten', 'pending', '$2y$10$xMwhC2/sfFlWZ2TPboiuRet5yqS0KSZ4QxQ3jrSSKHBUg4kAyvxL6', '2025-11-11 22:39:25', NULL, '2025-11-11 22:39:25', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for webinars
@@ -2134,11 +2140,12 @@ CREATE TABLE `webinars`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of webinars
 -- ----------------------------
+INSERT INTO `webinars` VALUES (1, '6a7b0fb8f17feb51aa7d', 'uploads/webinars/1786449848_403f71f44bc159574b2e.jpeg', 'Webinar 1', 'Labore sit ex sint do proident cillum adipisicing.', 'https://www.youtube.com/embed/RrESvSRNpeo', 'active', '2026-08-11 19:04:08', 1, '2026-08-11 19:04:08', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for whatsapps
@@ -2155,7 +2162,7 @@ CREATE TABLE `whatsapps`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `deleted_by` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of whatsapps
@@ -2167,5 +2174,6 @@ INSERT INTO `whatsapps` VALUES (4, '085367018192', 'Halo *SUWARNO*,\r\nSelamat! 
 INSERT INTO `whatsapps` VALUES (5, '085277775901', 'Halo *Muhammad Darwin Pohan*,\r\nSelamat! ???? Pendaftaran Anda di Star Community telah berhasil.\r\n\r\nBerikut adalah data akun Anda untuk login ke Support System:\r\n\r\n???? Username : darwin\r\n???? Password : darwin1982\r\n\r\n???? Login sekarang di: https://starcommunity.id/auth/login\r\n\r\n✨ Dengan bergabung, Anda sudah resmi menjadi bagian dari komunitas hebat yang siap tumbuh bersama.\r\n\r\nJika ada kendala login, silakan hubungi Admin Support: 6285800227944.\r\n\r\nTerima kasih,\r\nSalam sukses ????\r\nStar Community Support System', '2025-09-15 17:15:45', NULL, '2025-09-15 17:15:45', NULL, NULL, NULL);
 INSERT INTO `whatsapps` VALUES (6, '085817290822', 'Halo *Erwan*,\r\nSelamat! ???? Pendaftaran Anda di Star Community telah berhasil.\r\n\r\nBerikut adalah data akun Anda untuk login ke Support System:\r\n\r\n???? Username : httpsstarcommunityidreferwanhttps\r\n???? Password : erwan0777\r\n\r\n???? Login sekarang di: https://starcommunity.id/auth/login\r\n\r\n✨ Dengan bergabung, Anda sudah resmi menjadi bagian dari komunitas hebat yang siap tumbuh bersama.\r\n\r\nJika ada kendala login, silakan hubungi Admin Support: 6285800227944.\r\n\r\nTerima kasih,\r\nSalam sukses ????\r\nStar Community Support System', '2025-11-11 22:24:43', NULL, '2025-11-11 22:24:43', NULL, NULL, NULL);
 INSERT INTO `whatsapps` VALUES (7, '085817290822', 'Halo *Erwan*,\r\nSelamat! ???? Pendaftaran Anda di Star Community telah berhasil.\r\n\r\nBerikut adalah data akun Anda untuk login ke Support System:\r\n\r\n???? Username : erwan\r\n???? Password : erwan0007\r\n\r\n???? Login sekarang di: https://starcommunity.id/auth/login\r\n\r\n✨ Dengan bergabung, Anda sudah resmi menjadi bagian dari komunitas hebat yang siap tumbuh bersama.\r\n\r\nJika ada kendala login, silakan hubungi Admin Support: 6285800227944.\r\n\r\nTerima kasih,\r\nSalam sukses ????\r\nStar Community Support System', '2025-11-11 22:39:25', NULL, '2025-11-11 22:39:25', NULL, NULL, NULL);
+INSERT INTO `whatsapps` VALUES (8, '628131380797', 'Halo bos Aura Cellin (*admin*) ????\r\n\r\n???? Ada prospek baru yang masuk ke ITB STARCOM!\r\n\r\n???? Detail Prospek:\r\n???? Nama : Saya sendiri\r\n????️ Kota : KOTA BLITAR\r\n???? No. Telp : 628912364789\r\n\r\n???? Segera follow up, jangan sampai ketinggalan momentum. Siapa cepat dia dapat! ⚡\r\n\r\nSalam sukses,\r\n✨ Support System ITB STARCOM;', '2026-08-11 19:24:44', NULL, '2026-08-11 19:24:44', NULL, NULL, NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

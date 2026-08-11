@@ -35,15 +35,12 @@ import Breadcrumb from "@/components/main/breadcrumb";
                         <span validation-for="user_id"></span>
                     </div>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer d-flex justify-content-between gap-4">
+                    <NuxtLink class="btn btn-success w-100" :to="`/admin/itbs/clients/${slug}`"><i class="mdi mdi-account-multiple"></i> Clients</NuxtLink>
                     <button class="btn btn-primary w-100">Submit</button>
                 </div>
             </div>
         </form>
-
-        <div class="mt-4 px-4">
-            <NuxtLink class="btn btn-outline-primary w-100" :to="`/admin/itbs/clients/${slug}`"><i class="mdi mdi-account-multiple"></i> Clients</NuxtLink>
-        </div>
     </div>
 </template>
 

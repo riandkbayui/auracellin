@@ -3,10 +3,10 @@
 		<form id="form" ref="form" v-on:submit.prevent="form_submit">
 			<div class="card">
 				<div class="card-header text-center">
-					<h5 class="text-primary mb-0">Selamat Datang</h5>
+					<h5 class="text-white mb-0">Selamat Datang</h5>
 				</div>
 				<div class="card-body">
-					
+
 					<div class="text-center mb-3">
 						<div class="d-inline-block mb-2">
 							<div class="wh-72 rounded-circle bg-warning bg-soft d-flex justify-content-center align-items-center">
@@ -14,7 +14,7 @@
 							</div>
 						</div>
 
-						<div class="text-primary">AURA CELLIN</div>
+						<div class="text-primary h5">{{ head.title }}</div>
 					</div>
 
 					<div class="form-group">
@@ -26,7 +26,7 @@
 						<label for="password">Kata Sandi</label>
 						<div class="input-group">
 							<input name="password" placeholder="Masukkan password" value="" class="form-control" type="password" autocomplete="off" required />
-							<button type="button" id="pwd" class="btn btn-password btn-outline-primary">
+							<button type="button" id="pwd" class="btn btn-password btn-primary">
 								<i class="fa fa-eye"></i>
 							</button>
 						</div>
@@ -34,7 +34,7 @@
 					</div>
 					<div class="form-group">
 						<div class="text-end mb-2">
-							<nuxt-link to="/auth/forgot">Lupa Sandi?</nuxt-link>
+							<nuxt-link class="text-white" to="/auth/forgot">Lupa Sandi?</nuxt-link>
 						</div>
 						<button class="btn btn-primary w-100">Masuk</button>
 					</div>
@@ -48,15 +48,22 @@
 </template>
 
 <script>
+import nuxtConfig from "/nuxt.config.js";
 export default {
 	layout: "auth",
 	mounted() {
 		if(typeof jQuery !== 'undefined') {
 			$(document).ready(function () {
+        console.log(nuxtConfig.head);
 				$(`#pwd`).passwordToggle();
 			});
 		}
 	},
+  data() {
+    return {
+      head: nuxtConfig.head,
+    }
+  },
 	methods: {
 		async form_submit() {
 			if (typeof jQuery !== "undefined") {

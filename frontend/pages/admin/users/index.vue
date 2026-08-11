@@ -25,14 +25,14 @@ import Error from "@/components/main/error";
 								</div>
 								<div class="flex-grow-1">
 									<div class="d-flex mb-1">
-										<h5 class="text-primary flex-fill">{{ item.name }}</h5>
+										<h5 class="text-white flex-fill">{{ item.name }}</h5>
 										<div v-html="$badge(item.status, [
-											{value: `pending`, class: `badge badge-soft-info fsz-12`, label: `Pending`},
-											{value: `active`, class: `badge badge-soft-success fsz-12`, label: `Aktif`},
-											{value: `inactive`, class: `badge badge-soft-danger fsz-12`, label: `Tidak Aktif`},
+											{value: `pending`, class: `badge text-white badge-soft-info fsz-12`, label: `Pending`},
+											{value: `active`, class: `badge text-white badge-soft-success fsz-12`, label: `Aktif`},
+											{value: `inactive`, class: `badge text-white badge-soft-danger fsz-12`, label: `Tidak Aktif`},
 										])"></div>
 									</div>
-									<div class="text-primary d-flex justify-content-between g-2">
+									<div class="text-white d-flex justify-content-between g-2">
 										<div><i class="mdi mdi-account"></i> {{ item.username }}</div>
 										<div><i class="mdi mdi-whatsapp"></i> {{ item.phone || "-" }}</div>
 									</div>
@@ -44,7 +44,7 @@ import Error from "@/components/main/error";
 			</li>
 		</ul>
 
-		<button v-if="!loadingNext && has_next" class="w-100 btn btn-warning" @click.prevent="next">Berikutnya</button>
+		<button v-if="!loadingNext && has_next" class="w-100 btn btn-primary" @click.prevent="next">Berikutnya</button>
 
 		<Error v-if="err != ''">
 			<p class="text-white m-0">{{ err }}</p>

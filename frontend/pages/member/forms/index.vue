@@ -6,31 +6,34 @@ import Error from "@/components/main/error";
 <template>
 	<div>
 		<Breadcrumb title="Form" :pages="['Member Area']" />
-        <div class="mt-2 mb-3 text-end">
-            <NuxtLink class="btn btn-success bg-success bg-gradient" to="/member/forms/create"><i class="mdi mdi-plus-circle"></i> Buat Baru</NuxtLink>
-        </div>
+		<div class="mt-2 mb-3 text-end">
+			<NuxtLink class="btn btn-success bg-success bg-gradient" to="/member/forms/create">
+				<i class="mdi mdi-plus-circle"></i>
+				Buat Baru
+			</NuxtLink>
+		</div>
 
-		<ul v-if="results.length>0" class="list-unstyled m-0 p-0 mb-3">
+		<ul v-if="results.length > 0" class="list-unstyled m-0 p-0 mb-3">
 			<li v-for="(item, index) in results" :key="index">
-                <NuxtLink :to="`/member/forms/edit/${item.id}`" class="w-100 d-block">
-                    <div class="card waves-effect w-100">
-                        <div class="card-body">
-                            <div class="d-flex gap-2 align-items-center">
-                                <div>
-                                    <div class="avatar-md rounded-circle ar-1-1 bg-primary-gradient d-flex justify-content-center align-items-center">
-                                        <i class="mdi mdi-text-box-multiple fsz-24 text-secondary"></i>
-                                    </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h5 class="text-primary mb-1">{{ item.name }}</h5>
-                                    <div>
-                                        <span class="badge bg-primary text-secondary px-3 py-1">{{ item.status }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </NuxtLink>
+				<NuxtLink :to="`/member/forms/edit/${item.id}`" class="w-100 d-block">
+					<div class="card waves-effect w-100">
+						<div class="card-body">
+							<div class="d-flex gap-2 align-items-center">
+								<div>
+									<div class="avatar-md rounded-circle ar-1-1 bg-primary d-flex justify-content-center align-items-center">
+										<i class="mdi mdi-text-box-multiple fsz-24 text-white"></i>
+									</div>
+								</div>
+								<div class="flex-grow-1">
+									<h5 class="text-white mb-1">{{ item.name }}</h5>
+									<div>
+										<span class="badge bg-primary text-white px-3 py-1">{{ item.status }}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</NuxtLink>
 			</li>
 		</ul>
 
@@ -72,7 +75,7 @@ export default {
 				});
 
 				this.err = "";
-                this.results = [...this.results, ...response.results];
+				this.results = [...this.results, ...response.results];
 				this.has_next = response.has_next;
 			} catch (err) {
 				console.log(err);

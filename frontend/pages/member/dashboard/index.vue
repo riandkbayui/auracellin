@@ -47,7 +47,7 @@ import PkgLink from "@/components/member/PkgLink";
 					</div>
 					<div class="card-body">
 						<div class="text-center">
-							<h3 class="text-white" v-html="count.users"></h3>
+							<h3 class="text-warning" v-html="count.users"></h3>
 						</div>
 					</div>
 				</div>
@@ -59,7 +59,7 @@ import PkgLink from "@/components/member/PkgLink";
 					</div>
 					<div class="card-body">
 						<div class="text-center">
-							<h3 class="text-white" v-html="count.studyrooms"></h3>
+							<h3 class="text-warning" v-html="count.studyrooms"></h3>
 						</div>
 					</div>
 				</div>
@@ -71,7 +71,7 @@ import PkgLink from "@/components/member/PkgLink";
 					</div>
 					<div class="card-body">
 						<div class="text-center">
-							<h3 class="text-white" v-html="count.missions"></h3>
+							<h3 class="text-warning" v-html="count.missions"></h3>
 						</div>
 					</div>
 				</div>
@@ -165,9 +165,6 @@ import PkgLink from "@/components/member/PkgLink";
 					</NuxtLink>
 					<NuxtLink to="/member/scripts" class="waves-effect">
 						<Icon label="Skrip" className="mdi mdi-script-text-outline" />
-					</NuxtLink>
-					<NuxtLink to="/member/bonus-star" class="waves-effect">
-						<Icon label="Bonus Star" className="mdi mdi-star-box-multiple" />
 					</NuxtLink>
 					<NuxtLink to="/member/coming-soon" class="waves-effect">
 						<Icon label="Dream Plan" className="mdi mdi-calendar-check" />

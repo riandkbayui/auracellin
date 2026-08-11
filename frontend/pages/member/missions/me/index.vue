@@ -11,7 +11,7 @@ import Error from "@/components/main/error";
 			<li v-for="(item, index) in results" :key="index">
 				<div class="card">
 					<div class="card-header">
-						<div class="d-flex gap-2 justify-content-between text-primary">
+						<div class="d-flex gap-2 justify-content-between text-white">
 							<div>
 								<img :src="item.user.photo" class="avatar-sm ar-1-1 rounded-circle border border-3 img-cover-center" />
 							</div>
@@ -27,7 +27,7 @@ import Error from "@/components/main/error";
 					</div>
 					<div class="card-footer">
 						<NuxtLink :to="`/member/missions/edit/${item.code}`" class="btn btn-primary w-100">
-							<span class="text-primary"><i class="fa fa-edit"></i> Edit</span>
+							<span class="text-white"><i class="fa fa-edit"></i> Edit</span>
 						</NuxtLink>
 					</div>
 				</div>

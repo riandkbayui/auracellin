@@ -18,13 +18,13 @@ import Error from "@/components/main/error";
                         <div class="card-body">
                             <div class="d-flex gap-2 align-items-center">
                                 <div>
-                                    <div class="avatar-md rounded-circle ar-1-1 bg-primary-gradient d-flex justify-content-center align-items-center">
-                                        <i class="mdi mdi-account-box fsz-32 text-secondary"></i>
+                                    <div class="avatar-md rounded-circle ar-1-1 bg-primary d-flex justify-content-center align-items-center">
+                                        <i class="mdi mdi-account-box fsz-32 text-white"></i>
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h5 class="text-primary mb-1">{{ item.name }}</h5>
-                                    <div class="text-primary d-flex justify-content-between g-2">
+                                    <h5 class="text-white mb-1">{{ item.name }}</h5>
+                                    <div class="text-white d-flex justify-content-between g-2">
                                         <div><i class="mdi mdi-whatsapp"></i> {{ item.phone }}</div>
                                         <div><i class="mdi mdi-account"></i> {{ item.username || "-" }}</div>
                                     </div>
