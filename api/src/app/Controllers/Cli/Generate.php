@@ -91,9 +91,10 @@ class Generate extends BaseController {
                 $read = preg_replace("/{useSoftDelete}/", $useSoftDelete, $read);
                 $read = preg_replace("/{useTimestamp}/", $useTimestamp, $read);
                 $read = preg_replace("/{fields}/", json_encode($fields), $read);
-                $writepath = FCPATH . 'src' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . "{$className}.php";
+                $writepath = FCPATH . 'src' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Models' . DIRECTORY_SEPARATOR . "{$className}.php";
                 write_file($writepath, $read);
                 CLI::write("{$className}.php has been created.");
+                CLI::write("{$writepath}");
             } else {
                 CLI::write('Table name not found.');
             }

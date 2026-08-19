@@ -108,6 +108,12 @@ import PkgLink from "@/components/member/PkgLink";
 					<NuxtLink to="/admin/merchandises" className="waves-effect">
 						<Icon label="Merchandise" className="bx bxs-t-shirt" />
 					</NuxtLink>
+					<NuxtLink to="/admin/products" className="waves-effect">
+						<Icon label="Produk" className="bx bxs-package" />
+					</NuxtLink>
+					<NuxtLink to="/admin/productstocks" className="waves-effect">
+						<Icon label="Mutasi Stok" className="bx bxs-box" />
+					</NuxtLink>
 					<NuxtLink to="/admin/configs" className="waves-effect">
 						<Icon label="Konfigurasi" className="bx bxs-cog" />
 					</NuxtLink>
@@ -130,6 +136,9 @@ import PkgLink from "@/components/member/PkgLink";
 			</div>
 			<div class="card-body pb-0">
 				<div class="row row-cols-4">
+					<NuxtLink to="/member/transactions" class="waves-effect">
+						<Icon label="Transaksi" className="mdi mdi-cart" />
+					</NuxtLink>
 					<NuxtLink to="/member/cek-resi" class="waves-effect">
 						<Icon label="Cek Resi" className="mdi mdi-truck-fast" />
 					</NuxtLink>

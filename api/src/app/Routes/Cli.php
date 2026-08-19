@@ -1,6 +1,6 @@
 <?php
 
-$routes->group("cli", ["namespace"=>"\App\Controllers\Api\Cli"], function($routes){
+$routes->group("cli", ["namespace"=>"\App\Controllers\Cli"], function($routes){
 
     $routes->group("generate", function($routes) {
         $routes->cli("all", "Generate::all");
