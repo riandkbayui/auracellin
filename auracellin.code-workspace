@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "assets",
+			"path": "assets"
+		},
+		{
+			"name": "api",
+			"path": "api"
+		},
+		{
+			"name": "frontend",
+			"path": "frontend"
+		}
+	],
+	"settings": {}
+}

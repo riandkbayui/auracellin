@@ -3,6 +3,15 @@ import Breadcrumb from "@/components/main/breadcrumb";
 import Error from "@/components/main/error";
 </script>
 
+<style scoped>
+.title-ellipsis {
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+</style>
+
 <template>
 	<div>
 		<Breadcrumb title="Transaksi" :pages="['Member Area']" />
@@ -19,15 +28,15 @@ import Error from "@/components/main/error";
 				<div class="card w-100 mb-2 overflow-hidden">
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
-							<h5 class="text-primary">{{ item.code }}</h5>
-							<div :class="['badge fsz-12 px-2 text-white', statusBadgeClass(item.status)]">{{ item.status.toUpperCase() }}</div>
+							<h5 class="text-primary title-ellipsis">{{ item.invoice }}</h5>
+							<div :class="['badge fsz-12 px-2 h-100 text-white', statusBadgeClass(item.status)]">{{ item.status.toUpperCase() }}</div>
 						</div>
-						<p class="text-muted fsz-14 mb-1">Total: {{ item.amount }}</p>
-						<p class="text-muted fsz-14 mb-1">Tanggal: {{ $moment(item.created_at).format('DD MMM YYYY, HH:mm') }}</p>
+						<p class="text-white small mb-1">Tanggal: {{ $moment(item.created_at).format('DD MMM YYYY, HH:mm') }}</p>
 						<p class="mb-0">{{ item.description }}</p>
+						<p class="text-warning mb-1">Total: {{ $idr(item.total) }}</p>
 					</div>
 					<div class="card-footer">
-						<NuxtLink class="btn btn-info bg-info bg-gradient w-100" :to="`/member/transactions/detail/${item.id}`">
+						<NuxtLink class="btn btn-info bg-primary w-100" :to="`/member/transactions/detail/${item.id}`">
 							<i class="mdi mdi-eye"></i>
 							Detail
 						</NuxtLink>

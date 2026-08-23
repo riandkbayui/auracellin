@@ -63,7 +63,7 @@ class Transactions extends BaseController {
         try {
             if ($this->validate($rules)) {
                 $photo = $this->request->getFile("payment_photo");
-                
+
                 // Simpan foto sementara atau langsung di proses service
                 $data = [
                     "user_id"      => userId(),
@@ -101,13 +101,26 @@ class Transactions extends BaseController {
                 throw new Exception("Transaksi tidak ditemukan.");
             }
 
-            $details = service("TransactionDetails")->findAll([
-                ["where", "transaction_id", $transaction->id]
-            ]);
+            // Get transaction details with product information
+            $db = db_connect();
+            $details = $db->table('transaction_details')
+                ->select('transaction_details.*, products.name, products.photo, products.description as product_description')
+                ->join('products', 'products.id = transaction_details.product_id', 'left')
+                ->where('transaction_details.transaction_id', $transaction->id)
+                ->where('transaction_details.deleted_at IS NULL')
+                ->get()
+                ->getResult();
+
+            // Get city name if city_id exists
+            $city = null;
+            if (!empty($transaction->city_id)) {
+                $city = $db->table('area_cities')->where('id', $transaction->city_id)->get()->getRow();
+            }
 
             return $this->respond([
                 "transaction" => $transaction,
-                "details" => $details
+                "details" => $details,
+                "city" => $city
             ]);
         } catch (\Throwable $th) {
             return $this->respond(["message" => $th->getMessage()], 500);

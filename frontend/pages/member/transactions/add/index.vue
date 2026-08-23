@@ -87,20 +87,24 @@ import Breadcrumb from "@/components/main/breadcrumb";
 
 		<!-- Product Modal -->
 		<div class="modal fade" id="productModal" tabindex="-1">
-			<div class="modal-dialog">
+			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title">Pilih Produk</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 					</div>
 					<div class="modal-body">
-						<div v-for="item in products" :key="item.id" class="card mb-2 cursor-pointer" @click="addToCart(item)">
-							<div class="card-body d-flex align-items-center">
-								<img :src="item.photo" class="wh-80 ar-1-1 rounded me-3" style="object-fit: cover" />
-								<div>
-									<h6 class="text-primary">{{ item.name }}</h6>
-									<p class="text-warning text-opacity-75 mb-0">Rp {{ item.price }}</p>
-									<p class="text-warning text-opacity-75 mb-0">{{ item.description }}</p>
+						<div class="row row-cols-1 row-cols-lg-2 g-2">
+							<div v-for="item in products" :key="item.id" class="cursor-pointer" @click="addToCart(item)">
+								<div class="card mb-2">
+									<div class="card-body d-flex align-items-center">
+										<img :src="item.photo" class="wh-80 ar-1-1 rounded me-3" style="object-fit: cover" />
+										<div>
+											<h6 class="text-primary">{{ item.name }}</h6>
+											<p class="text-warning text-opacity-75 mb-0">Rp {{ $idr(item.price) }}</p>
+											<p class="text-warning small text-opacity-75 mb-0">{{ item.description }}</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

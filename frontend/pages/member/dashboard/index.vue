@@ -90,6 +90,9 @@ import PkgLink from "@/components/member/PkgLink";
 					<NuxtLink to="/admin/users" class="waves-effect">
 						<Icon label="Pengguna" className="bx bxs-user-circle" />
 					</NuxtLink>
+					<NuxtLink to="/admin/transactions" className="waves-effect">
+						<Icon label="Transaksi" className="bx bxs-cart" />
+					</NuxtLink>
 					<NuxtLink to="/admin/itbs" className="waves-effect">
 						<Icon label="ITB" className="bx bxs-megaphone" />
 					</NuxtLink>
@@ -116,9 +119,6 @@ import PkgLink from "@/components/member/PkgLink";
 					</NuxtLink>
 					<NuxtLink to="/admin/configs" className="waves-effect">
 						<Icon label="Konfigurasi" className="bx bxs-cog" />
-					</NuxtLink>
-					<NuxtLink to="/member/landing-page" className="waves-effect">
-						<Icon label="Landing Page" className="mdi mdi-home-account" />
 					</NuxtLink>
 					<NuxtLink to="/admin/whatsapp" className="waves-effect">
 						<Icon label="Whatsapp" className="mdi mdi-whatsapp" />
